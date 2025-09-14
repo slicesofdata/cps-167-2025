@@ -40,7 +40,7 @@ cty_hwy_point_plot <-
 
 ################################################################################
 # save the plot as cty_hwy_mpg_point.png to figs/
-ggsave(filename = <-- path to + file name -->, 
+ggsave(filename = "figs/cty_hwy_mpg_point.png", 
        plot = cty_hwy_point_plot,
        units = "in",
        #width = , 
