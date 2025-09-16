@@ -21,12 +21,14 @@
 source(here::here("src", "functions", "load-libraries.R"))
 
 ################################################################################
-# ...
-
+# loading libraries
+library(here)
+library(fs)
 
 ################################################################################
-# ...
-
+# Part 1
+raw_example   <- here("data", "raw", "mpg.Rds")
+clean_example <- here("data", "processed", "cleaned_mpg.Rds")
 
 ################################################################################
 # ...
