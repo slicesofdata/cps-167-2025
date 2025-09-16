@@ -1,10 +1,10 @@
 ################################################################################
-# Script Name:
-# Author:
-# GitHub:
-# Date Created:
+# Script Name: Using starter script
+# Author: Jaimie Yu
+# GitHub: jaimieyu2753-web
+# Date Created: 9/15/2025
 #
-# Purpose: This script ...
+# Purpose: This script practices how to use the starter script
 #
 ################################################################################
 
