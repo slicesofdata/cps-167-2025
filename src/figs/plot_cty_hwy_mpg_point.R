@@ -27,7 +27,7 @@ library(ggplot2)
 
 ################################################################################
 # read the cleaned data cleaned_mpg.Rds in data/processed 
-cleaned_mpg <- readRDS("data/processed/cleaned_mpg.Rds")
+cleaned_mpg <- readRDS(here::here("data", "processed", "cleaned_mpg.Rds"))
 
 
 ################################################################################
@@ -35,7 +35,7 @@ cleaned_mpg <- readRDS("data/processed/cleaned_mpg.Rds")
 cty_hwy_point_plot <-
   cleaned_mpg |>
   ggplot(mapping = aes(x = cty, y = hwy)) +
-  geom_point()
+  geom_point() 
 
 
 ################################################################################
