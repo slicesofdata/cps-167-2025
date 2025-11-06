@@ -1,5 +1,5 @@
 ---
-title: "Page example"
+title: "Analyzing the Impact of COVID-19 on United States Veteran Unemployment"
 format:
   html:
     toc: true
@@ -14,17 +14,6 @@ execute:
   #enabled: false
   freeze: auto
 ---
-
-# Overview
-
-[Quarto](https://quarto.org) files are structured similar to R Markdown files. You can **bold** and *italicize* text, create hyperlinks, and also bullet items among other things. There is a lot you can do with Quarto for building, [website ](https://quarto.org/docs/websites/).
-
-- [Formatting](https://quarto.org/docs/authoring/markdown-basics.html)
-- Use headers
-- Write formatted content
-- [Displaying plots and images](https://quarto.org/docs/authoring/figures.html)
-- Link to other websites
-- Link to other pages on this site
 
 ---
 
@@ -45,7 +34,8 @@ Content if necessary...
 For example:
 
 ```{.r}
-source(here::here("figs", "point_mpg_by_wt.R"))`
+source(here::here("figs", "point_mpg_by_wt.png"))` 
+
 ```
 
 Make sure to edit the code block so that the code runs only (no output).

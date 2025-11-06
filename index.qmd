@@ -1,10 +1,10 @@
 ---
-title: "Site Name"
+title: "Welcome to Data Viz CPS Team Website!"
 page-layout: article
 format:
   html:
     toc: true
-    toc-location: left
+    toc-location: right
     code-tools: false
     fig-align: center
     
@@ -12,126 +12,64 @@ execute:
   #enabled: false
   freeze: auto
 ---
+------------------------------------------------------------------------
 
-# Welcome
+## About Our Project
 
-Welcome to **Site Name**! Blah, blah...
+We are looking at the different labor market patterns during the Covid-19 time  using the CPS dataset. Our primary focus is on impact of COVID-19 on United States Veteran Unemployment, but we are also exmaining additional intersectionality such as household type, educational background and other demographic information. 
 
-## About This Site
-
-This simple site serves as the core template for building your website and is designed to communicate elements of building your plots, pages, and content for a webpage. You will build a Quarto website for a target audience to communicate data visualized in ways to communicate patterns, trends, in data or to tell a story about data. There are more advanced styling you can modify with Quarto websites but this template is a good starting point if you are unfamiliary with Quarto.
-
---- 
+------------------------------------------------------------------------
 
 <!-- the 3 hyphens seen above create an optional break on the page. Dp not place where they touche other content  -->
- 
 
-## Types of your Data Visualization Website
+## U.S. Government Current Population Survey (CPS)
 
-1. **Exploratory Data Stories**  
-   - *Purpose:* Allows visitors to interact with data to explore patterns and relationships.
-   - *Some Characteristic:*  
-     - Guided narrative plus visualizations  
-     - User-driven discovery (obviates raw data analysis skills)  
-   - Demonstrates that you can you can clean and wrangle raw open data, but also combine storytelling and data interpretation.
-  
-  
-2. **Analytical Decision-Support Tools**  
-   - *Purpose:* Help professionals understand data and make informed choices.
-   - *Some Characteristic:*  
-     - Multiple data metrics
-     - Provides different slices/groupings of data
-   - Demonstrates that you can clean and wrangle raw open data and can work with complex data sets that support business decisions directly.
+[Current Population Survey](https://www.census.gov/data/datasets/time-series/demo/cps/cps-basic.html), commonly referred to as the CPS, is conducted jointly by two major U.S. government agencies, the U.S. Census Bureau and the Bureau of Labor Statistics, or BLS.
 
+The CPS is a monthly household survey designed to measure key aspects of the labor market and demographic information.
 
-3. **Public Transparency & Open Data Portals**  
-   - *Purpose:* Share government or research data in a user-friendly way for either accountability or public engagement or both.
-   - *Some Characteristics:*  
-     - Clear, accessible visuals for non-expert audiences  
-     - Open data downloads  
-     - Trend and comparison features 
-   - Demonstrates you can clean and wrangle raw open data, combine multiple data sources, and provide value to otherwise stagnant data.
+For each month, it collects data from around 60,000 households, representing millions of individuals nationwide. The dataset covers a wide range of variables as well, including employment and unemployment status, income, educational background, household structures, and other demographic characteristics. Because of this rich demographic variables, the CPS is one of the few datasets that allow researchers to examine not only broad labor market trends, but also the distributional impacts on different diverse groups.
 
----
+It has also maintained a consistent survey design since the 1940s, which allows researchers to make meaningful comparisons over time and track how labor markets respond to major events and economic recession for example Covid-19 which is the main focus of our group
 
-## Coding DOs and DON'Ts
+------------------------------------------------------------------------
 
-### Do *NOT*:
+## Our Data Analysis Focus
 
-- Save files in random places (see directory structure)
-- Hard-code paths (e.g., `/myusername/directory/subdirectory/file.R` or `C:/myusername/directory/subdirectory/file.R`) 
-- Import or process data without code
-- Save/export plot files without code
-- Use the R Studio Git GUI
-- Use spaces for directory names or file names
-- use UPPERCASE characters in directories and file names
+Our project focuses on understanding the impact of major events on unemployment recovery, with an emphasis on identifying who recovered and why. The analysis seeks to capture how factors such as economic resilience, social structure, and individual resources shaped different recovery experiences.
 
-### Please **DO**:
+#### Covid-19 Pandemic
 
-- Save files in a directory structure
-- Reference directory and file paths using the **{here}** library
-  - by importing files using code
-  - by saving/exporting files using code
-- Use Git commands in the RStudio terminal
-- Use machine-readable file paths (e.g., directory and file names)
-  - by replacing spaces with _ or - (choose one)
-  - by making all characters lowercase 
+The analysis centers on the Covid-19 pandemic period and the subsequent recovery phase, capturing how unemployment trends evolved as the economy reopened. This timeline allows for comparison between the height of pandemic-related job losses and the gradual return to employment, providing insights into long-term recovery and disparities that persisted beyond the immediate crisis.
 
----
+#### Variables
 
-## For building your website, you will:
+[Overall CPS variables dictionary](https://www2.census.gov/programs-surveys/cps/datasets/2025/basic/2025_Basic_CPS_Public_Use_Record_Layout_plus_IO_Code_list.txt)
 
-- **Develop Website Content**
+The Current population survey household data contains a wide range of variables, and to further explore these dynamics, several key variables from the data were selected:
 
-  - Modify a `_quarto.yml` ([YAML](https://en.wiktionary.org/wiki/YAML)) config file for the page structure, options, and configuration
-  - Structure Quarto `.qmd` input files for the website pages (e.g., `index.qmd`, `about.qmd`, etc.)
-  - Add text content for the input file pages
-  - Render website files using *Build > Render Website* or **{quarto}** library; [See here for more details](https://quarto.org/docs/websites/)
-  - Push to GitHub and manage in [GitHub Pages](https://docs.github.com/en/pages)
+- ptdtrace – Race
 
-- **Maintain File Organization**
+- peeduca – Highest Education Background
 
-  - Organize directories and files
-  - Maintain a directory structure
+- prtgage – Age
 
-- **Create Data File(s) and Scripts**
+- pelaydur – Unemployment Duration (in weeks)
 
-  - Save data files in appropriate directory in `data/` (e.g., `data/raw/`)
-  - Write `.R` scripts for cleaning and summarizing data using **{tidyverse}** libraries 
-  - Save data-related scripts in `src/data/` using meaningful and standardized names
-  - Save cleaned/processed data files `data/processed/`
+- hrhtype – Household Type
 
-- **Create Plot Scripts, Functions, and Files**
+- peafever – Veteran Status
 
-  - *Scripts*
-  
-    - Write `.R` scripts for creating plots using **{ggplot}** 
-    - Save plot-related scripts in  `src/figs/` using meaningful and standardized names
+These variables together capture demographic, socioeconomic, and structural characteristics that influence how individuals and communities experienced unemployment recovery during and after the pandemic.
 
-  - *Function Script(s)*
-  
-    - Write a function to ensure uniform saving of plots using [ggplot2::ggsave()](https://ggplot2.tidyverse.org/reference/ggsave.html) and save function in `src/figs/` so that you can apply it systematically to format plot objects
-  
-  - *Plot Files*
-  
-    - Save plots/figures as **.png** files in `figs/` making sure to use unique names for each plot
-    - Link *.png* files inside webpages so they load
+------------------------------------------------------------------------
 
-  - *(Optional) Customize a Website Theme*
-  
-    - Create a `custom.scss` [Sass file](https://sass-lang.com/) to manage color schemes and save in `styles/` or create a [`_brand.yml` file](https://quarto.org/docs/authoring/brand.html) 
-    - Additional [theme tips can be found here](https://quarto.org/docs/output-formats/html-themes-more.html)
+Other Useful Project-Related Resources
 
----
-
-## Other Useful Project-Related Resources
-
-- [ggplot2 Reference](https://ggplot2.tidyverse.org/reference/)
-- [Tips for website pages](https://torquemag.io/2023/09/must-have-pages-website/) 
-Other 
-- [Quarto Documentation](https://quarto.org/docs/)
-- [Quarto Websites](https://quarto.org/docs/websites/)
-- Theming with a [_brand.yml](https://quarto.org/docs/authoring/brand.html), [example here](https://quarto.org/docs/blog/posts/2025-01-15-quarto-tip-brand-positron/)
-- [More on Brand YML](https://posit-dev.github.io/brand-yml/)
-- [Other Theming](https://quarto.org/docs/dashboards/theming.html)
-
+-   [ggplot2 Reference](https://ggplot2.tidyverse.org/reference/)
+-   [Tips for website pages](https://torquemag.io/2023/09/must-have-pages-website/) Other
+-   [Quarto Documentation](https://quarto.org/docs/)
+-   [Quarto Websites](https://quarto.org/docs/websites/)
+-   Theming with a [\_brand.yml](https://quarto.org/docs/authoring/brand.html), [example here](https://quarto.org/docs/blog/posts/2025-01-15-quarto-tip-brand-positron/)
+-   [More on Brand YML](https://posit-dev.github.io/brand-yml/)
+-   [Other Theming](https://quarto.org/docs/dashboards/theming.html)

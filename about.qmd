@@ -1,5 +1,5 @@
 ---
-title: "About Website Title"
+title: "Meet The Team"
 format: html
 
 execute:
@@ -7,9 +7,20 @@ execute:
   freeze: auto
 ---
 
+We are the Data Visualization CPS Project Team, responsible for analyzing and visualizing CPS data for our Data Visualization class. Our goal is to turn complex datasets into clear, engaging visuals that effectively communicate key insights and patterns to our audience.
 
-**This site** ... 
++:-------------------------------------------------------------:+:--------------------------------------------------:+:------------------------------------------------:+:-------------------------------------------------:+
+| ##### **Tanveer Chabba**                                      | ##### **Daniella Reyes**                           | ##### **Jaimie Yu**                              | ##### **Jessica Lin**                             |
++---------------------------------------------------------------+----------------------------------------------------+--------------------------------------------------+---------------------------------------------------+
+| ![](images/Tanveer.png){width="180"}                          | ![](images/Daniella.png){width="180" height="180"} | ![](images/Jaimie.png){width="180" height="180"} | ![](images/Jessica.png){width="180" height="180"} |
++---------------------------------------------------------------+----------------------------------------------------+--------------------------------------------------+---------------------------------------------------+
+| (CMC ’26)                                                     | (CMC ’26)                                          | (CMC ’26)                                        | (PZ ’26)                                          |
+|                                                               |                                                    |                                                  |                                                   |
+| Project Manager                                               | Coding Lead                                        | Coding Support                                   | Writing Lead                                      |
++---------------------------------------------------------------+----------------------------------------------------+--------------------------------------------------+---------------------------------------------------+
 
-Some [about page tips](https://www.orbitmedia.com/blog/about-page-best-practices-examples/) are also available.
+#### 
 
+#### 
 
+#### 

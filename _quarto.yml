@@ -9,7 +9,7 @@ project:
     #- "!call_scripts/" # don't render a directory
   #pre-render: Rscript prerender.R #load_libraries.R
   # after rendering completes, script that removes .R files from the docs/ folder.
-  post-render: Rscript cleanup/clean_docs_dir.R
+  # post-render: Rscript cleanup/clean_docs_dir.R
 
   #resources:
   #  - "webr-serviceworker.js"
@@ -20,12 +20,12 @@ project:
   
   # settings for previewing the website
   preview:
-    port: 167
+    port: 1670
     browser: true
     navigate: true
 
 website:
-  title: "Website Title" 
+  title: "PSYC167 Group Project - CPS" 
   
   # site-url: ""
   # add optional favicon 
@@ -34,8 +34,8 @@ website:
   # add optional page footer
   page-footer:
     # not necessary
-    center: |
-      [contact me](myemail@mydomain.com)
+    #center: |
+      #[contact me](myemail@mydomain.com)
     
     # not necessary
     left: | 
@@ -43,7 +43,7 @@ website:
       
     # not necessary
     right: |
-      [GitHub Repo](https://github.com/username/repositoryname)
+      [GitHub Repo](https://github.com/slicesofdata/cps-167-2025)
 
     # add optional background for footer
     background: "black"
@@ -52,38 +52,34 @@ website:
   
 
   # add webpage description
-  description: ""
+  #description: ""
 
   navbar:
     left:
       # the index file
-      - text: "Index Page Text" # use empty string to be blank
-        href: index.qmd
+      #- text: "Introduction" # use empty string to be blank
+       # href: index.qmd
 
       # adding another page
-      - text: "First Page Text" 
+      - text: "Main Finding" 
         href: pages/my_first_page.qmd  # use a meaningful name 
 
       # adding a tab with dropdown menu
-      - text: "Drop Tab Text"
+      - text: "Supplementary Factors"
         menu:
-          - text: "Text for first option"
+          - text: "Education"
             href: pages/my_second_page.qmd 
-          - text: "Text for second option"
+          - text: "Race"
             href: pages/my_third_page.qmd  
-          - text: "Exercise Test Page"
+          - text: "variable x variable"
             href: pages/team_test_page.qmd  
-
-      # the about file
-      - text: "About Page Text"
-        href: about.qmd
        
     right:
       - about.qmd     # to have about page here instead 
       
       # not necessary
       - icon: github
-        href: https://github.com/username   # omit for multiple users
+        href: https://github.com/slicesofdata/cps-167-2025  # omit for multiple users
         
       # not necessary
       #- text: "@myxhandle"
@@ -92,12 +88,9 @@ website:
 
 format:
   html:
-    # base case approach
-    theme: cosmo   # cosmo is the default, alternatively call the .scss file, [styles/custom.scss]
-    #theme: darkly  # or if you have .scss, call it [cosmo, styles/custom.scss]
-    #code-link: true
-    #code-fold: true
-    #code-tools: true
+    theme: 
+      light: [cosmo, styles/example-light.scss] # location of light theme
+      dark: [cosmo, styles/example-dark.scss]   # location of dark theme
 
     toc: true
     #page-layout: full
@@ -108,9 +101,9 @@ format:
 
 
 # for branding
-brand:
-  light: brand/light.yml
-  dark: brand/dark.yml
+#brand:
+  #light: brand/light.yml
+  #dark: brand/dark.yml
 
 # set quarto optional editor preference: source or visual
 #editor: source
