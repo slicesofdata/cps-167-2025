@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "index.qmd"
+    - "about.qmd"
+    - "pages/*.qmd" # render all *.qmd files in pages/
+    
+  preview:
+    port: 8888
+    browser: true
+    navigate: true
+
+website:
+  title: "Jaimie Hw07"
+  navbar:
+    left: # the right side of nav bar
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+      - text: "*My homework*"  
+        menu:
+        - text: "Menu item 1"
+          href: pages/page1.qmd
+        - text: "**Bold Menu item 2**"
+          href: pages/page2.qmd
+          
+    right:  # the right side of nav bar
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: 
+      light: [cosmo, styles/example-light.scss] # location of light theme
+      dark: [cosmo, styles/example-dark.scss]   # location of dark theme
+    toc: true # if you want a table of contents
