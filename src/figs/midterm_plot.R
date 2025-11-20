@@ -7,6 +7,7 @@
 #
 ################################################################################
 library(tidyverse)
+source(here::here("src","functions","save_plot_png.R"))
 
 ################################################################################
 cleaning_12.20_7.20 <- read_csv(file = here::here("data","raw", "12.20_7.20.csv"))
@@ -77,14 +78,8 @@ df_all <- df_all |>
   pivot_wider(
     names_from = variable,
     values_from = response)
-  
 
-saveRDS(object = df_all, 
-        file = here::here("data", "processed", "data_cleaned.Rds")
-)
-
-
-graph_data <- df_all |> 
+df_all <- df_all |> 
   select(year, ptdtrace, pelaydur) |> 
   mutate(race = case_when(
     ptdtrace == 1 ~ "White",
@@ -95,24 +90,44 @@ graph_data <- df_all |>
     ptdtrace > 5~ "Multiracial"
   )) 
 
+df_all <- df_all |> 
+  mutate(year = paste0("20", year))
 
 
-graph_data |>
+saveRDS(object = df_all, 
+        file = here::here("data", "processed", "cps_all_post_midterm.rds")
+)
+
+race_unemploy <- df_all |>
   na.omit() |>
   ggplot(aes(x = year, y = pelaydur, fill = race)) +
   stat_summary(
     fun = mean,
     geom = "bar",
     position = position_dodge()
-  )+
+  ) +
   coord_cartesian(ylim = c(0, 25)) +
-  labs (title = "Average Unemployment Duration by Race",
+  labs (title = "Mean Unemployment Duration by Racial Groups",
         x = "Year", 
-        y = "Avg Unemployment Duration (Weeks)",
+        y = "Mean Unemployment Duration (Weeks)",
         fill = "Race")+
-  theme_minimal() +
-  theme (plot.margin = unit(c(1, 2, 1, 2), "cm"))
+  theme_minimal()  +
+  annotate("segment",
+           x = -Inf, xend = Inf,
+           y = 15,  yend = 15,
+           color = "red", linewidth = 1) + 
+  annotate("text",
+           x = Inf, y = 15,
+           label = "Long-Term Unemployed",
+           hjust = 1.1, vjust = -0.5,
+           size = 4)
 
+save_plot_png(
+  plot = race_unemploy,
+  filename = "mean_race_unemploy.png",
+  figs_dir = here::here("figs"),
+  width = 2000, height = 1100, dpi = 300, units = "px"
+)
 
 ################################################################################
 
@@ -144,7 +159,6 @@ graph2 |>
         fill = "Education")+
   theme_minimal() +
   theme (plot.margin = unit(c(1, 2, 1, 2), "cm"))
-
 
 
 

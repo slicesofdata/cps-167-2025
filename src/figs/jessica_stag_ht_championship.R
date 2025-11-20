@@ -24,7 +24,7 @@ library(stringr)
 library(here)
 
 
-source(here::here("src","figs","save_plot_png.R"))
+source(here::here("src","functions","save_plot_png.R"))
 ################################################################################
 # Reading the data
 
