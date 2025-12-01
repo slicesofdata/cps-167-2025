@@ -1,0 +1,60 @@
+---
+title: "Jaimie Yu"
+---
+
+# Assembling your Elements 
+
+You will ensure that your data and plotting scripts needed for creating your plot are used to build the up-to-date version of the plot.
+
+## Code Block for Sourcing Your Scripts
+
+```{r}
+df_all <- readRDS("/Users/jamis/Desktop/DataViz/cps-167-2025/processed/df_all_cps.rds")
+
+library(ggplot2)
+library(tidyverse)
+```
+
+```{r}
+## The Modified Plot
+unemploy <- df_all |>
+  group_by(race) |>
+  summarize(avg_duration = mean(dur_unemp, na.rm = TRUE)) |>
+  ggplot(aes(x = race, y = avg_duration, fill = race)) +
+  geom_col(alpha = 0.8) +
+  labs(
+    title = "Average Unemployment Duration by Race",
+    x = "Race",
+    y = "Average Duration (weeks)"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(angle = 25, hjust = 1)
+  ) +
+  annotate("segment",
+           x= -inf, xend=Inf,
+           y=16,yend=16,
+           color = "red", linewidth = 1)
+  
+
+save_plot_png(
+  plot = unemploy,
+  filename = "race and vet umemployment status",
+  figs_dir = here::here("figs"),
+  size = 4
+)
+
+```
+## Code Block for Embedding your PNG
+
+```{r}
+# plot with a caption
+
+#| fig.cap: "Your custom message here"
+#| fig.align: "center" # to center plot on page if desired
+#| out.width: "100%"   # or some other % appropriate for you site
+
+knitr::include_graphics(here::here("figs", "stag_ht_chamionship.png"))
+```
+

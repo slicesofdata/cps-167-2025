@@ -20,12 +20,23 @@
 #R.utils::sourceDirectory(here::here("src", "functions"))
 source(here::here("src", "functions", "load-libraries.R"))
 
-################################################################################
-# ...
 
+library(ggplot2)
+library(dplyr)
 
 ################################################################################
-# ...
+# mpg data
+#data <- mpg |>
+#  ggplot(mapping = aes(x= displ, y = hwy))
+  
+data
+
+################################################################################
+# modify plot
+better_mpg <- 
+  mpg |>
+  ggplot(mapping = aes(x = displ, y = hwy)) +
+  geom_point(position = position_jitter())
 
 
 ################################################################################
