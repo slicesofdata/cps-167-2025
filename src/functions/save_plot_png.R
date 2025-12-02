@@ -1,78 +1,64 @@
-################################################################################
-# Script Name: Plot saving Function
-# Author: Jaimie Yu
-# GitHub: jaimieyu2753_web
-# Date Created: 9/27/25
+################################################################
+# Script Name: save_plot_png()
+# Author: Jessica Lin
+# GitHub: JessicaLin92
+# Date Created: Sep 29th
 #
-# Purpose: This script has the function that saves plots
+# Purpose: This script creates the function to save plot objects
 #
-################################################################################
+################################################################
 
-################################################################################
+################################################################
 # Note: When sourcing script files, if you do not want objects
 # available in this script, use the source() function along with
 # the local = TRUE argument. By default, source() will make
 # objects available in the current environment.
 
-################################################################################
+################################################################
 # Load necessary libraries/source any function directories
 # Example:
 #R.utils::sourceDirectory(here::here("src", "functions"))
-#source(here::here("src", "functions", "load-libraries.R"))
-
-################################################################################
-# Load libraries
 library(ggplot2)
-library(dplyr)
 
-
-################################################################################
-# Building the funciton
+################################################################
+# Writing the function
 save_plot_png <- function(
     plot,
-    file_name,
+    filename,
     figs_dir,
     units = "px",
     width = 1600,
-    height = 1100,
-    dpi = 300
-) {
-  ggsave(
-    filename = file.path(figs_dir, file_name),
-    plot=plot,
-    device = "png",
-    path = figs_dir,
-    scale = 1,
-    width = width,
-    height = height,
-    units = c("in", "cm", "mm", "px"),
+    height = 1100, 
     dpi = 300,
-    limitsize = TRUE,
-    bg = NULL,
-    create.dir = FALSE
-  )
+    ...
+) {
+  ggsave(filename = filename,
+         plot = plot,
+         device = "png",
+         path = figs_dir,
+         scale = 1,
+         width = width,
+         height = height,
+         units = "px",
+         dpi = dpi,
+         limitsize = TRUE, 
+         bg = NULL,
+         create.dir = FALSE)
 }
 
-
-################################################################################
-# Testing the function
-test <- ggplot(diamonds, aes(x=cut, y= price))+
-  geom_point()
+################################################################
+#Test the function 
+test <- ggplot(diamonds, aes(x = carat, y = price)) + geom_point()
 
 test
 
 save_plot_png(
   plot = test,
-  file_name = "diamonds_scatter.png",
-  figs_dir = here::here("report", "figs"),
-  width = 10,
-  height = 20,
-  dpi = 300,
-  units = "px"
+  filename = "diamonds_scatter.png",
+  figs_dir = here::here("figs"),
+  width = 1600, height = 1100, dpi = 300, units = "px"
 )
 
-
-
-
-################################################################################
+################################################################
+################################################################
 # End of script
