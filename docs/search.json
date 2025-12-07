@@ -42,27 +42,6 @@
     "text": "Hyperlinks to internal website pages\n\nExternal Websites\nRefer to an outside url:\nText to display\n\n\nInternal website Pages\nRefer to the rendered HTML files:\n\nVisit the Home Page\nRead the About Page\nGot to another page\n\n\nTip: LInk to .html files and not the .qmd file."
   },
   {
-    "objectID": "blog/posts/firstpost.html",
-    "href": "blog/posts/firstpost.html",
-    "title": "My great title",
-    "section": "",
-    "text": "My post text goes here …"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Meet The Team",
-    "section": "",
-    "text": "We are the Data Visualization CPS Project Team, responsible for analyzing and visualizing CPS data for our Data Visualization class. Our goal is to turn complex datasets into clear, engaging visuals that effectively communicate key insights and patterns to our audience.\n\n\n\n\n\n\n\n\n\nTanveer Chabba\nDaniella Reyes\nJaimie Yu\nJessica Lin\n\n\n\n\n\n\n\n\n(CMC ’26)\nProject Manager\n(CMC ’26)\nCoding Lead\n(CMC ’26)\nCoding Support\n(PZ ’26)\nWriting Lead"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "My blog",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMy great title\n\n\n\ndata\n\ndogs\n\nanimals\n\n\n\n\n\n\n\n\n\nJan 1, 2025\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html#about-our-project",
     "href": "index.html#about-our-project",
     "title": "Welcome to Data Viz CPS Team Website!",
@@ -81,7 +60,56 @@
     "href": "index.html#our-data-analysis-focus",
     "title": "Welcome to Data Viz CPS Team Website!",
     "section": "Our Data Analysis Focus",
-    "text": "Our Data Analysis Focus\nOur project focuses on understanding the impact of major events on unemployment recovery, with an emphasis on identifying who recovered and why. The analysis seeks to capture how factors such as economic resilience, social structure, and individual resources shaped different recovery experiences.\n\nCovid-19 Pandemic\nThe analysis centers on the Covid-19 pandemic period and the subsequent recovery phase, capturing how unemployment trends evolved as the economy reopened. This timeline allows for comparison between the height of pandemic-related job losses and the gradual return to employment, providing insights into long-term recovery and disparities that persisted beyond the immediate crisis.\n\n\nVariables\nOverall CPS variables dictionary\nThe Current population survey household data contains a wide range of variables, and to further explore these dynamics, several key variables from the data were selected:\n\nptdtrace – Race\npeeduca – Highest Education Background\nprtgage – Age\npelaydur – Unemployment Duration (in weeks)\nhrhtype – Household Type\npeafever – Veteran Status\n\nThese variables together capture demographic, socioeconomic, and structural characteristics that influence how individuals and communities experienced unemployment recovery during and after the pandemic.\n\nOther Useful Project-Related Resources\n\nggplot2 Reference\nTips for website pages Other\nQuarto Documentation\nQuarto Websites\nTheming with a _brand.yml, example here\nMore on Brand YML\nOther Theming"
+    "text": "Our Data Analysis Focus\nOur project focuses on understanding the impact of major events on unemployment recovery, with an emphasis on identifying who recovered and why. The analysis seeks to capture how factors such as economic resilience, social structure, and individual resources shaped different recovery experiences.\n\nCovid-19 Pandemic\nThe analysis centers on the Covid-19 pandemic period and the subsequent recovery phase, capturing how unemployment trends evolved as the economy reopened. This timeline allows for comparison between the height of pandemic-related job losses and the gradual return to employment, providing insights into long-term recovery and disparities that persisted beyond the immediate crisis.\n\n\nVariables\nOverall CPS variables dictionary\nThe Current population survey household data contains a wide range of variables, and to further explore these dynamics, several key variables from the data were selected:\n\nptdtrace – Race\npeeduca – Highest Education Background\nprtgage – Age\npelaydur – Unemployment Duration (in weeks)\nhrhtype – Household Type\npeafever – Veteran Status\n\nThese variables together capture demographic, socioeconomic, and structural characteristics that influence how individuals and communities experienced unemployment recovery during and after the pandemic."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "My blog",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMy great title\n\n\n\ndata\n\ndogs\n\nanimals\n\n\n\n\n\n\n\n\n\nJan 1, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Meet The Team",
+    "section": "",
+    "text": "We are the Data Visualization CPS Project Team, responsible for analyzing and visualizing CPS data for our Data Visualization class. Our goal is to turn complex datasets into clear, engaging visuals that effectively communicate key insights and patterns to our audience.\n\n\n\n\n\n\n\n\n\nTanveer Chabba\nDaniella Reyes\nJaimie Yu\nJessica Lin\n\n\n\n\n\n\n\n\n(CMC ’26)\nProject Manager\n(CMC ’26)\nCoding Lead\n(CMC ’26)\nCoding Support\n(PZ ’26)\nWriting Lead"
+  },
+  {
+    "objectID": "blog/posts/firstpost.html",
+    "href": "blog/posts/firstpost.html",
+    "title": "My great title",
+    "section": "",
+    "text": "My post text goes here …"
+  },
+  {
+    "objectID": "pages/JessicaLin_hw08_updated.html",
+    "href": "pages/JessicaLin_hw08_updated.html",
+    "title": "Jessica Lin HW8",
+    "section": "",
+    "text": "You will ensure that your data and plotting scripts needed for creating your plot are used to build the up-to-date version of the plot.\n\n\n\n# source data-related scripts \n\n# source plotting script(s)\nsource(here::here(\"src\", \"figs\", \"plotting.R\"))\n\n\n\n\nDescribe why you might want to implement this approach.\nFirst is the x-axis label, now it’s all 4 digits which is the correct way of indicating the year. I added one segment label using the annotate() function to mark the threshold/margin in the BLS system to differentiate short-term and long-term unemployed time and it was 15 weeks. So by this, we can shift the audience’s focus back onto how the covid pandamic was influencing the unemployment patterns as 2020 and 2021 was the only two years that had almost every racial group’s mean unemployment time over the long-term mark.\n\n\n\n\n# plot with a caption\n\n#| fig.cap: \"Mean Unemployment Time by different racial groups\"\n#| fig.align: \"center\" # to center plot on page if desired\n#| out.width: \"100%\"   # or some other % appropriate for you site\n\nknitr::include_graphics(here::here(\"figs\", \"mean_race_unemploy.png\"))"
+  },
+  {
+    "objectID": "pages/JessicaLin_hw08_updated.html#code-block-for-sourcing-your-scripts",
+    "href": "pages/JessicaLin_hw08_updated.html#code-block-for-sourcing-your-scripts",
+    "title": "Jessica Lin HW8",
+    "section": "",
+    "text": "# source data-related scripts \n\n# source plotting script(s)\nsource(here::here(\"src\", \"figs\", \"plotting.R\"))"
+  },
+  {
+    "objectID": "pages/JessicaLin_hw08_updated.html#the-modified-plot",
+    "href": "pages/JessicaLin_hw08_updated.html#the-modified-plot",
+    "title": "Jessica Lin HW8",
+    "section": "",
+    "text": "Describe why you might want to implement this approach.\nFirst is the x-axis label, now it’s all 4 digits which is the correct way of indicating the year. I added one segment label using the annotate() function to mark the threshold/margin in the BLS system to differentiate short-term and long-term unemployed time and it was 15 weeks. So by this, we can shift the audience’s focus back onto how the covid pandamic was influencing the unemployment patterns as 2020 and 2021 was the only two years that had almost every racial group’s mean unemployment time over the long-term mark."
+  },
+  {
+    "objectID": "pages/JessicaLin_hw08_updated.html#code-block-for-embedding-your-png",
+    "href": "pages/JessicaLin_hw08_updated.html#code-block-for-embedding-your-png",
+    "title": "Jessica Lin HW8",
+    "section": "",
+    "text": "# plot with a caption\n\n#| fig.cap: \"Mean Unemployment Time by different racial groups\"\n#| fig.align: \"center\" # to center plot on page if desired\n#| out.width: \"100%\"   # or some other % appropriate for you site\n\nknitr::include_graphics(here::here(\"figs\", \"mean_race_unemploy.png\"))"
   },
   {
     "objectID": "pages/my_fourth_page.html",
@@ -102,6 +130,6 @@
     "href": "pages/my_third_page.html",
     "title": "Unemployment acorss different racial sub-group",
     "section": "",
-    "text": "Overview\nText here …"
+    "text": "source(here::here(\"src\", \"figs\", \"plotting.R\")) \n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n`summarise()` has grouped output by 'race'. You can override using the `.groups` argument."
   }
 ]

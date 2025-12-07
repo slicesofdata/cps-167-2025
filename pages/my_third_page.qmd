@@ -15,12 +15,10 @@ execute:
   freeze: auto
 ---
 
+```{r}
+source(here::here("src", "figs", "plotting.R")) 
+```
 
-# Overview
+![](/figs/mean_race_unemploy.png)
 
-Text here ...
-
-
-
-
-
+![](/figs/prop_race_unemploy.png)
