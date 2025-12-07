@@ -69,7 +69,19 @@ df_all_post_midterm <- df_all |>
       peeduca %in% c(44, 45) ~ "Master’s and Professional Degree",
       peeduca > 45       ~ "Doctorate degree"
     )
+  ) |>
+  mutate(
+    hrhtype = fct_recode(
+      as.factor(hrhtype),
+      "Married-couple household"        = "1",
+      "Male householder, no spouse"      = "2",
+      "Female householder, no spouse"    = "3",
+      "Nonfamily household (male)"       = "4",
+      "Nonfamily household (female)"     = "5",
+      "Group quarters / Other"           = "6"
+    )
   )
+
 
 saveRDS(
   df_all_post_midterm,
