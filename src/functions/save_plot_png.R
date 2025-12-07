@@ -22,6 +22,8 @@ library(ggplot2)
 
 ################################################################
 # Writing the function
+figs_dir <- here::here("figs")
+
 save_plot_png <- function(
     plot,
     filename,
@@ -47,17 +49,7 @@ save_plot_png <- function(
 }
 
 ################################################################
-#Test the function 
-test <- ggplot(diamonds, aes(x = carat, y = price)) + geom_point()
 
-test
-
-save_plot_png(
-  plot = test,
-  filename = "diamonds_scatter.png",
-  figs_dir = here::here("figs"),
-  width = 1600, height = 1100, dpi = 300, units = "px"
-)
 
 ################################################################
 ################################################################
