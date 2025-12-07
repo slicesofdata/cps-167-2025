@@ -12,17 +12,18 @@ execute:
   #enabled: false
   freeze: auto
 ---
+
 ------------------------------------------------------------------------
 
 ## About Our Project
 
-We are looking at the different labor market patterns during the Covid-19 time  using the CPS dataset. Our primary focus is on impact of COVID-19 on United States Veteran Unemployment, but we are also exmaining additional intersectionality such as household type, educational background and other demographic information. 
+We are looking at the different labor market patterns during the Covid-19 time using the CPS dataset. Our primary focus is on impact of COVID-19 on United States Veteran Unemployment, but we are also exmaining additional intersectionality such as household type, educational background and other demographic information.
 
 ------------------------------------------------------------------------
 
-<!-- the 3 hyphens seen above create an optional break on the page. Dp not place where they touche other content  -->
-
 ## U.S. Government Current Population Survey (CPS)
+
+
 
 [Current Population Survey](https://www.census.gov/data/datasets/time-series/demo/cps/cps-basic.html), commonly referred to as the CPS, is conducted jointly by two major U.S. government agencies, the U.S. Census Bureau and the Bureau of Labor Statistics, or BLS.
 
@@ -48,28 +49,16 @@ The analysis centers on the Covid-19 pandemic period and the subsequent recovery
 
 The Current population survey household data contains a wide range of variables, and to further explore these dynamics, several key variables from the data were selected:
 
-- ptdtrace – Race
+-   ptdtrace – Race
 
-- peeduca – Highest Education Background
+-   peeduca – Highest Education Background
 
-- prtgage – Age
+-   prtgage – Age
 
-- pelaydur – Unemployment Duration (in weeks)
+-   pelaydur – Unemployment Duration (in weeks)
 
-- hrhtype – Household Type
+-   hrhtype – Household Type
 
-- peafever – Veteran Status
+-   peafever – Veteran Status
 
 These variables together capture demographic, socioeconomic, and structural characteristics that influence how individuals and communities experienced unemployment recovery during and after the pandemic.
-
-------------------------------------------------------------------------
-
-Other Useful Project-Related Resources
-
--   [ggplot2 Reference](https://ggplot2.tidyverse.org/reference/)
--   [Tips for website pages](https://torquemag.io/2023/09/must-have-pages-website/) Other
--   [Quarto Documentation](https://quarto.org/docs/)
--   [Quarto Websites](https://quarto.org/docs/websites/)
--   Theming with a [\_brand.yml](https://quarto.org/docs/authoring/brand.html), [example here](https://quarto.org/docs/blog/posts/2025-01-15-quarto-tip-brand-positron/)
--   [More on Brand YML](https://posit-dev.github.io/brand-yml/)
--   [Other Theming](https://quarto.org/docs/dashboards/theming.html)
