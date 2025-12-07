@@ -56,13 +56,14 @@ unemp_race_plot <- cps_for_plots |>
     data = race_medians,
     aes(
       x     = ptdtrace,
-      y     = med * 1.10,
+      y     = 5,
       label = ptdtrace
     ),
     inherit.aes = FALSE,
-    color       = "black",
+    color       = "white",
     hjust       = 0,
-    size        = 4
+    size        = 4,
+    nudge_x = -0.1
   ) +
   
   # y-axis scaling
@@ -100,6 +101,16 @@ unemp_race_plot <- cps_for_plots |>
     y     = "Unemployment Duration (weeks)",
     fill  = "Race"
   ) +
+  scale_fill_manual(
+    name = "Race",
+    values = c(
+      "Asian" = "#3E53BD",
+      "Black" = "#3E53BD",
+      "Multi-racial" = "#3E53BD",
+      "Native American" = "#3E53BD",
+      "Pacific Islander" = "#3E53BD",
+      "White" = "#3E53BD")
+  ) +
   theme_minimal() +
   theme(
     legend.position  = "none",
@@ -112,8 +123,6 @@ print(unemp_race_plot)
 # Save plots
 ################################################################################
 
-figs_dir <- here::here("figs")
-dir.create(figs_dir, showWarnings = FALSE)
 
 save_plot_png(
   plot    = unemp_race_plot,
@@ -124,3 +133,4 @@ save_plot_png(
   dpi      = 300,
   units    = "px"
 )
+
