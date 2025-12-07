@@ -63,7 +63,7 @@ unemp_edu_plot <- cps_edu |>
     ),
     inherit.aes = FALSE,
     color = "black",
-    size  = 3,
+    size  = 4,
   ) +
   
   # Overall median line
@@ -110,7 +110,7 @@ unemp_edu_plot <- cps_edu |>
 
 save_plot_png(
   plot    = unemp_edu_plot,
-  filename = "unemp_by_race.png",
+  filename = "unemp_by_edu.png",
   figs_dir = figs_dir,
   width    = 3000,
   height   = 2600,
