@@ -15,26 +15,6 @@
 # the local = TRUE argument. By default, source() will make
 # objects available in the current environment.
 
-################################################################################
-# Load necessary libraries/source any function directories
-library(dplyr)
-
-################################################################################
-# read the raw data
-mpg <- readRDS(object = <-- path to and name of file --> )
-
-
-################################################################################
-# clean the data
-cleaned_mpg <-
-  mpg |>
-  filter(manufacturer == "audi")
-
-################################################################################
-# save the cleaned data file
-cleaned_mpg |>
-  saveRDS( <-- save the file as cleaned_mpg.Rds --> )
-
 
 ################################################################################
 # End of script
