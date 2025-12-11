@@ -1,6 +1,6 @@
 ################################################################################
 # Script Name: DR_cleaning script
-# Author: Daniella Reyes
+# Author: Daniella Reyes and Jaimie Yu
 # GitHub: 
 # Date Created:
 #
