@@ -9,7 +9,7 @@ project:
     #- "!call_scripts/" # don't render a directory
   #pre-render: Rscript prerender.R #load_libraries.R
   # after rendering completes, script that removes .R files from the docs/ folder.
-  post-render: Rscript cleanup/clean_docs_dir.R
+  #post-render: Rscript cleanup/clean_docs_dir.R
 
   #resources:
   #  - "webr-serviceworker.js"
@@ -20,12 +20,12 @@ project:
   
   # settings for previewing the website
   preview:
-    port: 167
+    port: 1670
     browser: true
     navigate: true
 
 website:
-  title: "Website Title" 
+  title: "Daniella's Website Title" 
   
   # site-url: ""
   # add optional favicon 
@@ -91,14 +91,11 @@ website:
       #  aria-label: X (formerly Twitter)
 
 format:
-  html:
+   html:
+    theme: 
+      light: [cosmo, styles/example-light.scss] # location of light theme
+      dark: [cosmo, styles/example-dark.scss]   # location of dark theme
     # base case approach
-    theme: cosmo   # cosmo is the default, alternatively call the .scss file, [styles/custom.scss]
-    #theme: darkly  # or if you have .scss, call it [cosmo, styles/custom.scss]
-    #code-link: true
-    #code-fold: true
-    #code-tools: true
-
     toc: true
     #page-layout: full
     # add option for other fonts
@@ -106,11 +103,6 @@ format:
     #mainfont: arial #Nunito
     #fontsize: 1.1rem # 1.2rem
 
-
-# for branding
-brand:
-  light: brand/light.yml
-  dark: brand/dark.yml
 
 # set quarto optional editor preference: source or visual
 #editor: source

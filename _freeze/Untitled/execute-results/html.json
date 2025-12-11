@@ -1,0 +1,15 @@
+{
+  "hash": "9c1e9da2c4c4b3992814e33493c59119",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Replicating Plots, HW5\"\nformat:\n  html:\n    toc: false\n    #toc-location: left\n    toc-depth: 4          # or higher, depending on how deep your headings go\n    toc-collapse: false   # keep all expanded by default\n    number-sections: false\n    code-tools: false\n    fig-align: center\n\nexecute:\n  #enabled: false\n  freeze: auto\n---\n\n\n\n# Replicating a visual\n\n![](src/figs/Unemployment Duration by Veteran Status.png)\n\n#Understanding Coordinate Modifications\n\n![](src/figs/Unemployment Duration By Race and Veteran Status.png)\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

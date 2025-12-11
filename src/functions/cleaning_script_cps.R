@@ -1,0 +1,78 @@
+################################################################################
+# Script Name: DR_cleaning script
+# Author: Daniella Reyes
+# GitHub: 
+# Date Created:
+#
+# Purpose: This script is for cleaning plots
+#
+################################################################################
+
+################################################################################
+# Note: When sourcing script files, if you do not want objects
+# available in this script, use the source() function along with
+# the local = TRUE argument. By default, source() will make
+# objects available in the current environment.
+
+################################################################################
+# Load necessary libraries/source any function directories
+# Example:
+#R.utils::sourceDirectory(here::here("src", "functions"))
+library(readr)
+library(readxl)
+library(tidyverse)
+library(ggplot2)
+
+################################################################################
+# load in data
+
+df_all <- read_rds(file = here::here("data","processed", "df_all_cps.rds"))
+
+
+df_all_post_midterm <- df_all |>
+  filter(response != -1 & !is.na(response)) |>
+  group_by(month, year, variable) |>
+  mutate(obs_id = row_number()) |>
+  ungroup() |>
+  pivot_wider(
+    names_from  = variable,
+    values_from = response
+  ) |>
+  mutate(
+    peafever = factor(
+      peafever,
+      levels = c(1, 2),
+      labels = c("Veteran", "Non-Veteran")
+    )
+  ) |>
+  mutate(
+    ptdtrace = forcats::fct_collapse(
+      as.factor(ptdtrace),
+      White           = "1",
+      Black           = "2",
+      `Native American` = "3",
+      Asian           = "4",
+      `Pacific Islander` = "5",
+      `Multi-racial`  = c(
+        "6","7","8","9","10","11","12","13","14","15",
+        "16","17","18","19","20","21","22","23","24","25","26"
+      )
+    )
+  ) |>
+  mutate(
+    edu = dplyr::case_when(
+      peeduca %in% 31:34 ~ "Less than High School",
+      peeduca %in% 35:38 ~ "Some High School, No Diploma",
+      peeduca == 39      ~ "High School Graduate",
+      peeduca %in% 40:42 ~ "Some College or Associate Degree",
+      peeduca == 43      ~ "Bachelor’s Degree",
+      peeduca %in% c(44, 45) ~ "Master’s and Professional Degree",
+      peeduca > 45       ~ "Doctorate degree"
+    )
+  )
+
+saveRDS(
+  df_all_post_midterm,
+  file = here::here("data", "processed", "cps_all_post_midterm.rds")
+)
+

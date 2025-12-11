@@ -24,13 +24,11 @@ execute:
 # to disable, select the 'show nothing run code' option from the gear set of options 
 
 # read and clean the data
-install.packages(here)
 library(here)
 source(file = here::here("src", "data", "clean_mpg_data.R"))
 # read cleaned and plot data
 
-file.exists(here::here("src", "figs", "plot_cty_hwy_mpg_point.R"))
-source(file = here::here("src","figs","plot_cty_hwy_mpg_point.R"))
+
 #source("src/figs/plot_cty_hwy_mpg_point.R")
 ```
 
@@ -65,7 +63,7 @@ Example:
 
 ### Plot with `width` configurations
 
-![The Second Plot](../figs/cty_hwy_mpg_point.png){width=00, height=1080}
+![The Second Plot](../figs/cty_hwy_mpg_point.png){width=2600, height=1080}
 
 
 

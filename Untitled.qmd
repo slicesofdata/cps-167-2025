@@ -1,0 +1,31 @@
+---
+title: "Replicating Plots, HW5"
+format:
+  html:
+    toc: false
+    #toc-location: left
+    toc-depth: 4          # or higher, depending on how deep your headings go
+    toc-collapse: false   # keep all expanded by default
+    number-sections: false
+    code-tools: false
+    fig-align: center
+
+execute:
+  #enabled: false
+  freeze: auto
+---
+
+# Replicating a visual
+
+![](src/figs/Unemployment%20Duration%20by%20Veteran%20Status.png)
+
+#Understanding Coordinate Modifications
+
+![](src/figs/Unemployment%20Duration%20By%20Race%20and%20Veteran%20Status.png)
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+#source(here::here("directory-structure","src", "beavis_stag_ht_chamionship.R"))
+```
