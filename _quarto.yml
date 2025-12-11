@@ -71,8 +71,6 @@ website:
             href: pages/education.qmd 
           - text: "Race"
             href: pages/my_third_page.qmd  
-          - text: "variable x variable"
-            href: pages/team_test_page.qmd  
        
     right:
       - about.qmd     # to have about page here instead 

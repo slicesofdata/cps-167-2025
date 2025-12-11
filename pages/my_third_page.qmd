@@ -1,0 +1,24 @@
+---
+title: "Unemployment acorss different racial sub-group"
+format:
+  html:
+    toc: true
+    #toc-location: left
+    toc-depth: 4          # or higher, depending on how deep your headings go
+    toc-collapse: false   # keep all expanded by default
+    number-sections: false
+    code-tools: false
+    fig-align: center
+
+execute:
+  #enabled: false
+  freeze: auto
+---
+
+```{r}
+source(here::here("src", "figs", "plotting.R")) 
+```
+
+![](/figs/mean_race_unemploy.png)
+
+![](/figs/prop_race_unemploy.png)
