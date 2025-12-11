@@ -88,8 +88,8 @@ save_plot_png(
   plot    = unemp_edu_time_plot,
   filename = "unemp_edu_time_plot.png",
   figs_dir = figs_dir,
-  width    = 1000,
-  height   = 5600,
+  width    = 2000,
+  height   = 6000,
   dpi      = 300,
   units    = "px"
 )
