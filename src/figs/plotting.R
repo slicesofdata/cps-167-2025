@@ -1,4 +1,5 @@
 library(tidyverse)
+library(ggrepel)
 source(here::here("src","functions","save_plot_png.R"))
 
 df_all_post_midterm <- readRDS(here::here("data","processed", "cps_all_post_midterm.rds"))
@@ -87,14 +88,25 @@ df_prop <- df_all_post_midterm |>
   ) |>
   ungroup()
 
+last_points <- df_prop |>
+  group_by(ptdtrace) |> 
+  filter(year == min(year))
+
 prop_longterm <- df_prop |> 
   na.omit() |>
 ggplot(aes(x = year, y = prop_longterm, color = ptdtrace, group = ptdtrace)
 ) +
-  geom_line(linewidth = 1.5) +
+  geom_line(linewidth = 1.5, alpha = 0.75) +
   scale_y_continuous(breaks = seq(0, .0135, by = .0015),
                      labels = scales::percent,
                      limits = c(0, .0135)) +
+  ggrepel::geom_text_repel(data = last_points,
+            aes(label = ptdtrace),
+            hjust = -0.1,
+            size = 5,
+            fontface = "bold") +
+  
+  geom_point(aes(x=year, y=prop_longterm, color = ptdtrace, group = ptdtrace), size = 2)+
   labs(
     title = "Proportion of Long-Term Unemployment (15 weeks) across racial groups",
     x = "Year",
@@ -123,7 +135,8 @@ ggplot(aes(x = year, y = prop_longterm, color = ptdtrace, group = ptdtrace)
     axis.text.y     = element_text(color = "grey40"),
     legend.title    = element_text(color = "grey40"),
     legend.text     = element_text(color = "grey40")
-  ) 
+  ) +
+  theme(legend.position = "none") 
 
 save_plot_png(
   plot = prop_longterm,

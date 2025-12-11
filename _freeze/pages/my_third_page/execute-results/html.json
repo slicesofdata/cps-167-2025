@@ -1,0 +1,15 @@
+{
+  "hash": "3132b814e4df000a88215d97c235cf51",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Unemployment acorss different racial sub-group\"\nformat:\n  html:\n    toc: true\n    #toc-location: left\n    toc-depth: 4          # or higher, depending on how deep your headings go\n    toc-collapse: false   # keep all expanded by default\n    number-sections: false\n    code-tools: false\n    fig-align: center\n\nexecute:\n  #enabled: false\n  freeze: auto\n---\n\n\n::: {.cell}\n\n```{.r .cell-code}\nsource(here::here(\"src\", \"figs\", \"plotting.R\")) \n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n`summarise()` has grouped output by 'race'. You can override using the `.groups` argument.\n```\n\n\n:::\n:::\n\n\n![](/figs/mean_race_unemploy.png)\n\n![](/figs/prop_race_unemploy.png)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
