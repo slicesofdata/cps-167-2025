@@ -1,10 +1,10 @@
 ################################################################################
-# Script Name:
-# Author:
+# Script Name: unemployment duration vs Eudcation and race
+# Author:Jaimie Yu
 # GitHub:
-# Date Created:
+# Date Created:12/1/25
 #
-# Purpose: This script ...
+# Purpose: This script plots the unemployment duration vs education and race
 #
 ################################################################################
 
