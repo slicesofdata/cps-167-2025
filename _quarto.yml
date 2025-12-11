@@ -62,13 +62,13 @@ website:
 
       # adding another page
       - text: "Main Finding" 
-        href: pages/my_first_page.qmd  # use a meaningful name 
+        href: pages/veteran_status.qmd  # use a meaningful name 
 
       # adding a tab with dropdown menu
       - text: "Supplementary Factors"
         menu:
           - text: "Education"
-            href: pages/my_second_page.qmd 
+            href: pages/education.qmd 
           - text: "Race"
             href: pages/my_third_page.qmd  
           - text: "variable x variable"
