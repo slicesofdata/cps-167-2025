@@ -2,6 +2,121 @@
   {
     "objectID": "pages/team_test_page.html",
     "href": "pages/team_test_page.html",
+<<<<<<< HEAD
+=======
+    "title": "Page example",
+    "section": "",
+    "text": "# do not display the code block on your website. \n# to disable, select the 'show nothing run code' option from the gear set of options \n\n# read and clean the data\n#source( &lt;-- data cleaning path and file name --&gt;)\n\n# read cleaned and plot data\n#source( &lt;-- data plotting file name --&gt;)"
+  },
+  {
+    "objectID": "pages/team_test_page.html#sub-section-level-2",
+    "href": "pages/team_test_page.html#sub-section-level-2",
+    "title": "Page example",
+    "section": "Sub-Section (Level #2)",
+    "text": "Sub-Section (Level #2)\n\nOur Plot! (Level #3)\nThe plot may feel stretched. If this is the case, you will want to determine good plot-saving settings for a website.\nFor example, controlling the plot saving parameter argument of ggplot::sggsave() using units = \"px\" (pixels) and specifying the width (in pixels) and height (in pixels) may be a good approach. You can determine what pixel dimensions would be good for a webpage by doing and Internet search.\nExample:\n\nwidth    = 1600\nheight   = 1100\nunits    = \"px\"\ndpi      = 200 # or \"retina\"\n\n\n\n\n\nsome caption\n\n\n\n\nPlot with width configurations\n\n\n\na different caption\n\n\n\n\nOur Plot with width configurations and no caption"
+  },
+  {
+    "objectID": "pages/my_second_page.html",
+    "href": "pages/my_second_page.html",
+    "title": "Unemployment acorss different educational background sub-group",
+    "section": "",
+    "text": "Another variable examined in this project is educational background, represented by the peeduca variable, which captures the highest level of education attained by each respondent in the CPS dataset. Education is a key determinant in labor market outcomes, influencing employment opportunities, earnings potential, and overall career mobility.For this reason, we analyze how unemployment rates vary across educational backgrounds during the COVID-19 pandemic and the subsequent recovery period.\n\na descriptive graph with overall details (Tanveer’s graph)\n\n\na graph display variable acorss different years\n\n\nsome explanation behind - lit review"
+  },
+  {
+    "objectID": "pages/my_first_page.html#header-level-2-tips-for-linkingdisplaying-figures-and-images.",
+    "href": "pages/my_first_page.html#header-level-2-tips-for-linkingdisplaying-figures-and-images.",
+    "title": "Analyzing the Impact of COVID-19 on United States Veteran Unemployment",
+    "section": "Header Level 2: Tips for linking/displaying figures and images.",
+    "text": "Header Level 2: Tips for linking/displaying figures and images.\n\nHeader Level 3: Linking to a Plot/Fig\n\nWrite you code to create your plot and save it. Save this script in src/figs. The source code does not need to be on the website.\nEnsure that your plot is saved to figs/ by referencing the path with {here}.\nAt the top of the .qmd file for your page, add a code block that source()s the script that will generate the plot you wish displayed on that page.\n\nFor example:\nsource(here::here(\"figs\", \"point_mpg_by_wt.png\"))` \nMake sure to edit the code block so that the code runs only (no output).\nNOTE: Code blocks that appear in .qmd files will call .R files only. Do NOT embed code blocks in your .qmd file(s) that will process data or create plots directly. Reserve .qmd files for website text, sourcing script files, and calling .png plot files. Developers and engineers compartmentalize project elements and do not combine all content into a single files. Doing so creates many problems not limited to code breaking and code-repair problems, Git merge problems, etc. You will follow a similar practice of breaking the project into pieces, save those files, and push them to the remote repository weekly for your team members.\nThis code-source()ing step also ensures that plot(s) are (re)created when Quarto rendering the website build files. You certainly want this feature so that new website elements and files are built during the rendering process. A full website re-build, however, is unnecessary when no element of the website changes other than the images and figures embedded within it. As a result, re-builds are not always necessary and will increase update time."
+  },
+  {
+    "objectID": "pages/my_first_page.html#header-level-2-optional-circumventing-a-full-website-build",
+    "href": "pages/my_first_page.html#header-level-2-optional-circumventing-a-full-website-build",
+    "title": "Analyzing the Impact of COVID-19 on United States Veteran Unemployment",
+    "section": "Header Level 2: (Optional) Circumventing a Full Website Build",
+    "text": "Header Level 2: (Optional) Circumventing a Full Website Build\nSometimes the main structure of your website is untouched but you have new data and you need to run a rebuild of your plots. Although re-rendering is not problematic, it might just take longer than you desire. If you don’t need to render the website and just want to build files, the following is a solution, though requires some extra work.\nTo avoid a full site rebuild (re-render) when you simply want to create and git push new plots:\n\nAdd your source()ing code to a separate file, for example, call_scripts/call_plot_scripts.qmd.\nAdd a code block to source individual .R files or all .R files in a directory.\n\nExample:\n#| include: false\n\n# source a script file that this page depends on\nsource(here::here(\"figs\", \"point_mpg_by_wt.R\"))\n\nThis .qmd file will render and create the .png files you need in your specified directory but the page will not be linked on your website. Technically, it will be visible at https://the_url/call_scripts/call_plot_scripts.html but this will be difficult to find. You can always remove the file or directory after rendering the website if you want to remove it completely.\n\n\nLink the plot .png file in your .qmd file.\n\nOnce you know the name and location of the file, you can reference it like this, where the .png file is being pulled from figs/:\n\n\n\na plot description\n\n\n\nLinking to Image Example\nSimilarly, save your image in a folder like images/, and use this format to show it:\n\n\n\nshort description if necessary"
+  },
+  {
+    "objectID": "pages/my_first_page.html#hyperlinks-to-internal-website-pages",
+    "href": "pages/my_first_page.html#hyperlinks-to-internal-website-pages",
+    "title": "Analyzing the Impact of COVID-19 on United States Veteran Unemployment",
+    "section": "Hyperlinks to internal website pages",
+    "text": "Hyperlinks to internal website pages\n\nExternal Websites\nRefer to an outside url:\nText to display\n\n\nInternal website Pages\nRefer to the rendered HTML files:\n\nVisit the Home Page\nRead the About Page\nGot to another page\n\n\nTip: LInk to .html files and not the .qmd file."
+  },
+  {
+    "objectID": "index.html#about-our-project",
+    "href": "index.html#about-our-project",
+    "title": "Welcome to Data Viz CPS Team Website!",
+    "section": "About Our Project",
+    "text": "About Our Project\nWe are looking at the different labor market patterns during the Covid-19 time using the CPS dataset. Our primary focus is on impact of COVID-19 on United States Veteran Unemployment, but we are also exmaining additional intersectionality such as household type, educational background and other demographic information."
+  },
+  {
+    "objectID": "index.html#u.s.-government-current-population-survey-cps",
+    "href": "index.html#u.s.-government-current-population-survey-cps",
+    "title": "Welcome to Data Viz CPS Team Website!",
+    "section": "U.S. Government Current Population Survey (CPS)",
+    "text": "U.S. Government Current Population Survey (CPS)\nCurrent Population Survey, commonly referred to as the CPS, is conducted jointly by two major U.S. government agencies, the U.S. Census Bureau and the Bureau of Labor Statistics, or BLS.\nThe CPS is a monthly household survey designed to measure key aspects of the labor market and demographic information.\nFor each month, it collects data from around 60,000 households, representing millions of individuals nationwide. The dataset covers a wide range of variables as well, including employment and unemployment status, income, educational background, household structures, and other demographic characteristics. Because of this rich demographic variables, the CPS is one of the few datasets that allow researchers to examine not only broad labor market trends, but also the distributional impacts on different diverse groups.\nIt has also maintained a consistent survey design since the 1940s, which allows researchers to make meaningful comparisons over time and track how labor markets respond to major events and economic recession for example Covid-19 which is the main focus of our group"
+  },
+  {
+    "objectID": "index.html#our-data-analysis-focus",
+    "href": "index.html#our-data-analysis-focus",
+    "title": "Welcome to Data Viz CPS Team Website!",
+    "section": "Our Data Analysis Focus",
+    "text": "Our Data Analysis Focus\nOur project focuses on understanding the impact of major events on unemployment recovery, with an emphasis on identifying who recovered and why. The analysis seeks to capture how factors such as economic resilience, social structure, and individual resources shaped different recovery experiences.\n\nCovid-19 Pandemic\nThe analysis centers on the Covid-19 pandemic period and the subsequent recovery phase, capturing how unemployment trends evolved as the economy reopened. This timeline allows for comparison between the height of pandemic-related job losses and the gradual return to employment, providing insights into long-term recovery and disparities that persisted beyond the immediate crisis.\n\n\nVariables\nOverall CPS variables dictionary\nThe Current population survey household data contains a wide range of variables, and to further explore these dynamics, several key variables from the data were selected:\n\nptdtrace – Race\npeeduca – Highest Education Background\nprtgage – Age\npelaydur – Unemployment Duration (in weeks)\nhrhtype – Household Type\npeafever – Veteran Status\n\nThese variables together capture demographic, socioeconomic, and structural characteristics that influence how individuals and communities experienced unemployment recovery during and after the pandemic."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "My blog",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMy great title\n\n\n\ndata\n\ndogs\n\nanimals\n\n\n\n\n\n\n\n\n\nJan 1, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Meet The Team",
+    "section": "",
+    "text": "We are the Data Visualization CPS Project Team, responsible for analyzing and visualizing CPS data for our Data Visualization class. Our goal is to turn complex datasets into clear, engaging visuals that effectively communicate key insights and patterns to our audience.\n\n\n\n\n\n\n\n\n\nTanveer Chabba\nDaniella Reyes\nJaimie Yu\nJessica Lin\n\n\n\n\n\n\n\n\n(CMC ’26)\nProject Manager\n(CMC ’26)\nCoding Lead\n(CMC ’26)\nCoding Support\n(PZ ’26)\nWriting Lead"
+  },
+  {
+    "objectID": "blog/posts/firstpost.html",
+    "href": "blog/posts/firstpost.html",
+    "title": "My great title",
+    "section": "",
+    "text": "My post text goes here …"
+  },
+  {
+    "objectID": "pages/JessicaLin_hw08_updated.html",
+    "href": "pages/JessicaLin_hw08_updated.html",
+    "title": "Jessica Lin HW8",
+    "section": "",
+    "text": "You will ensure that your data and plotting scripts needed for creating your plot are used to build the up-to-date version of the plot.\n\n\n\n# source data-related scripts \n\n# source plotting script(s)\nsource(here::here(\"src\", \"figs\", \"plotting.R\"))\n\n\n\n\nDescribe why you might want to implement this approach.\nFirst is the x-axis label, now it’s all 4 digits which is the correct way of indicating the year. I added one segment label using the annotate() function to mark the threshold/margin in the BLS system to differentiate short-term and long-term unemployed time and it was 15 weeks. So by this, we can shift the audience’s focus back onto how the covid pandamic was influencing the unemployment patterns as 2020 and 2021 was the only two years that had almost every racial group’s mean unemployment time over the long-term mark.\n\n\n\n\n# plot with a caption\n\n#| fig.cap: \"Mean Unemployment Time by different racial groups\"\n#| fig.align: \"center\" # to center plot on page if desired\n#| out.width: \"100%\"   # or some other % appropriate for you site\n\nknitr::include_graphics(here::here(\"figs\", \"mean_race_unemploy.png\"))"
+  },
+  {
+    "objectID": "pages/JessicaLin_hw08_updated.html#code-block-for-sourcing-your-scripts",
+    "href": "pages/JessicaLin_hw08_updated.html#code-block-for-sourcing-your-scripts",
+    "title": "Jessica Lin HW8",
+    "section": "",
+    "text": "# source data-related scripts \n\n# source plotting script(s)\nsource(here::here(\"src\", \"figs\", \"plotting.R\"))"
+  },
+  {
+    "objectID": "pages/JessicaLin_hw08_updated.html#the-modified-plot",
+    "href": "pages/JessicaLin_hw08_updated.html#the-modified-plot",
+    "title": "Jessica Lin HW8",
+    "section": "",
+    "text": "Describe why you might want to implement this approach.\nFirst is the x-axis label, now it’s all 4 digits which is the correct way of indicating the year. I added one segment label using the annotate() function to mark the threshold/margin in the BLS system to differentiate short-term and long-term unemployed time and it was 15 weeks. So by this, we can shift the audience’s focus back onto how the covid pandamic was influencing the unemployment patterns as 2020 and 2021 was the only two years that had almost every racial group’s mean unemployment time over the long-term mark."
+  },
+  {
+    "objectID": "pages/JessicaLin_hw08_updated.html#code-block-for-embedding-your-png",
+    "href": "pages/JessicaLin_hw08_updated.html#code-block-for-embedding-your-png",
+    "title": "Jessica Lin HW8",
+    "section": "",
+    "text": "# plot with a caption\n\n#| fig.cap: \"Mean Unemployment Time by different racial groups\"\n#| fig.align: \"center\" # to center plot on page if desired\n#| out.width: \"100%\"   # or some other % appropriate for you site\n\nknitr::include_graphics(here::here(\"figs\", \"mean_race_unemploy.png\"))"
+  },
+  {
+    "objectID": "pages/my_fourth_page.html",
+    "href": "pages/my_fourth_page.html",
+>>>>>>> 57c92b014b387bc11bddbd2fd4572a0d3a6248ec
     "title": "Page example",
     "section": "",
     "text": "This is our plot for the first homework.\n\n\nOur plot was made by Daniella, who is working as collaborator 3.\n\n\nThe plot may feel stretched. If this is the case, you will want to determine good plot-saving settings for a website.\nFor example, controlling the plot saving parameter argument of ggplot::sggsave() using units = \"px\" (pixels) and specifying the width (in pixels) and height (in pixels) may be a good approach. You can determine what pixel dimensions would be good for a webpage by doing and Internet search.\nExample:\n\nwidth    = 1600\nheight   = 1100\nunits    = \"px\"\ndpi      = 200 # or \"retina\"\n\n\n\n\n\nFirst Plot\n\n\n\n\n\n\n\n\nThe Second Plot"
@@ -14,6 +129,7 @@
     "text": "Our plot was made by Daniella, who is working as collaborator 3.\n\n\nThe plot may feel stretched. If this is the case, you will want to determine good plot-saving settings for a website.\nFor example, controlling the plot saving parameter argument of ggplot::sggsave() using units = \"px\" (pixels) and specifying the width (in pixels) and height (in pixels) may be a good approach. You can determine what pixel dimensions would be good for a webpage by doing and Internet search.\nExample:\n\nwidth    = 1600\nheight   = 1100\nunits    = \"px\"\ndpi      = 200 # or \"retina\"\n\n\n\n\n\nFirst Plot\n\n\n\n\n\n\n\n\nThe Second Plot"
   },
   {
+<<<<<<< HEAD
     "objectID": "pages/my_second_page.html",
     "href": "pages/my_second_page.html",
     "title": "Key Directories",
@@ -182,10 +298,16 @@
     "text": "Sub-Section (Level #2)\n\nOur Plot! (Level #3)\nThe plot may feel stretched. If this is the case, you will want to determine good plot-saving settings for a website.\nFor example, controlling the plot saving parameter argument of ggplot::sggsave() using units = \"px\" (pixels) and specifying the width (in pixels) and height (in pixels) may be a good approach. You can determine what pixel dimensions would be good for a webpage by doing and Internet search.\nExample:\n\nwidth    = 1600\nheight   = 1100\nunits    = \"px\"\ndpi      = 200 # or \"retina\"\n\n\n\n\nPlot with width configurations\n\n\n\nOur Plot with width configurations"
   },
   {
+=======
+>>>>>>> 57c92b014b387bc11bddbd2fd4572a0d3a6248ec
     "objectID": "pages/my_third_page.html",
     "href": "pages/my_third_page.html",
-    "title": "Page example",
+    "title": "Unemployment acorss different racial sub-group",
     "section": "",
+<<<<<<< HEAD
     "text": "Overview\nText here …"
+=======
+    "text": "source(here::here(\"src\", \"figs\", \"plotting.R\")) \n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n`summarise()` has grouped output by 'race'. You can override using the `.groups` argument."
+>>>>>>> 57c92b014b387bc11bddbd2fd4572a0d3a6248ec
   }
 ]

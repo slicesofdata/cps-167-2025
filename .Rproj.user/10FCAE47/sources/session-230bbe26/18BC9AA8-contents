@@ -1,0 +1,46 @@
+---
+title: "Daniella"
+---
+
+# Assembling your Elements 
+
+You will ensure that your data and plotting scripts needed for creating your plot are used to build the up-to-date version of the plot.
+
+## Code Block for Sourcing Your Scripts
+
+```{r}
+# source data-related scripts 
+
+library(here)
+source(here("cleaning_script_cps.R"))
+
+# source plotting script(s)
+
+source(here("dr_midterm_plots_script.R"))
+
+
+
+
+
+
+```
+
+## The Modified Plot
+
+I want to change my plots to represent the shape of the data more based on what we have most recently learned. I decided to make a violin plot and implement the sina plot layered on top. I decided to focus the plot more and focus on the median weeks of unemployment, 9.
+
+
+
+
+## Code Block for Embedding your PNG
+
+```{r}
+# plot with a caption
+
+#| fig.cap: "Updated plot after midterm revisions and added knowledge"
+#| fig.align: "center" # to center plot on page if desired
+#| out.width: "100%"   # or some other % appropriate for you site
+
+knitr::include_graphics(here::here("figs", "Unemployment_Duration_Distribution_by_Veteran_Status.png"))
+```
+
