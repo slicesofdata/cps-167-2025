@@ -1,6 +1,5 @@
 ---
 title: "veteran_status"
-editor: visual
 ---
 
 ## **Discovering Patterns in Veteran Status**
