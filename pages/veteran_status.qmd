@@ -3,7 +3,7 @@ title: "Discovering Labor Patterns in Veteran Status"
 ---
 Author: Daniella Reyes
 
-One of our key demographic variables is a person's veteran status. It determines our study's scope and impact for our target population and audience of interest, the United States Government. The following visualizations establish key information on the population of survey respondents that are veterans. 
+One of our key demographic variables is a person's veteran status. It determines our study's scope and impact for our target population and audience of interest, the United States Government. This is the data that we will be working with to analyze all of our variables, it is important to get an inital sense of what that data looks like and what it entails. The following visualizations establish key information on the population of survey respondents that are veterans. 
 
 ```{r setup, message=FALSE, warning=FALSE}
 #| label: make-count-vet
@@ -29,8 +29,7 @@ knitr::include_graphics(
 
 In 2023, the United States reported having a total of 15.8 American veterans. They receive support from the United States Department of Government Affairs, including services like housing, healthcare, and employment support. Given it is a large federal department, they budgeted 441.3 billion for the 2026 Fiscal Year. 
 
-Figure 1 demonstrates the amount of respondents and their status as either a veteran or having never served for the United States government. The Community Population Survey (CPS) fails to capture all of the household who identify as veterans or non-veterans. They take a sample of American households, meaning that the number of veterans reported by CPS is much less than the government's reported number. CPS respondents are largely non-veterans or of unknown status. Notably, the number of respondents in 2023 increased for both groups, while veteran respondents remained largely stable.
-
+Figure 1 demonstrates the amount of respondents and their status as either a veteran or having never served for the United States government. The Current Population Survey (CPS) fails to capture all of the household who identify as veterans or non-veterans. They take a sample of American households, meaning that the number of veterans reported by CPS is much less than the government's reported number. CPS respondents are largely non-veterans or of unknown status. Notably, the number of respondents in 2023 increased for both groups, while veteran respondents remained largely stable. 
 ```{r setup, message=FALSE, warning=FALSE}
 #| label: make-unemp-duration-race
 #| include: false
@@ -53,7 +52,7 @@ knitr::include_graphics(
 )
 ```
 
-Figure 2 gives us more information about the two groups of interest, non-veterans and veterans. The visualization further divides the variables by the race of the respondents, breaking it down into white and non-white. This study will discuss the role of race further in a separate page. Figure 2 emphasizes the discrepancies among the different demographics in the CPS respondents. White groups are the largest group responding to CPS and Non-White respondents are the fewest. 
+Figure 2 gives us more information about the two groups of interest, non-veterans and veterans. The visualization further divides the variables by the race of the respondents, breaking it down into white and non-white. This study will discuss the role of race further in a separate page. Figure 2 emphasizes the discrepancies among the different demographics in the CPS respondents. White groups are the largest group responding to CPS and Non-White respondents are the fewest. This gives us, and people using the website, a better grasp of the scale of the populations and who is being represented in CPS. 
 
 ```{r setup, message=FALSE, warning=FALSE}
 #| label: make-uemp-duration-density
