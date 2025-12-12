@@ -18,8 +18,6 @@ library(tidyverse)
 library(ggplot2)
 ################################################################################
 # load in data
-
-source(here::here("src", "functions", "load-libraries.R"))
 df_all <- readRDS(here::here("data", "processed", "cps_all_post_midterm.rds"))
 ################################################################################
 # website graph 1 
@@ -93,18 +91,6 @@ web_graph_avg <- df_all |>
 
 web_graph_avg
 
-
-######################## finding median
-df_all_post_midterm|>
-  class(pelaydur)
-
-head(df_all_post_midterm)
-
-mean(df_all_post_midterm$pelaydur, na.rm = TRUE)
-filtered <- df_all_post_midterm |>
-  filter(!is.na(pelaydur))
-
-median(filtered$pelaydur)
 
 ################################################################################
 # website graph 3

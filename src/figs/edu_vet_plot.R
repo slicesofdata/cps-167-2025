@@ -19,6 +19,14 @@ library(tidyverse)
 library(ggplot2)
 library(here)
 
+#load in the processed data
+df_all_post_midterm <- readRDS(
+  here::here("data", "processed", "cps_all_post_midterm.rds")
+)
+
+# Plot saving helper
+source(here::here("src", "functions", "save_plot_png.R"))
+
 ################################################################################
 # Plot 3 — Unemployment Duration by Education and Veteran Status
 
@@ -42,6 +50,14 @@ edu_vet_plot <- cps_edu_vet |>
     outlier.alpha = 0.15,
     outlier.shape = NA
   ) +
+  stat_summary(
+    fun = median,
+    geom = "text",
+    aes(label = round(..y.., 1)),
+    color = "black",
+    vjust = -0.5,
+    size = 3
+  )+
   facet_wrap(
     vars(edu),                # one panel per education level
     ncol = 1,
@@ -60,8 +76,8 @@ edu_vet_plot <- cps_edu_vet |>
       "Veteran" = "#1f78b4",        # blue
       "Non-Veteran" = "#33a02c"     # green
     )
-    ) +
-  theme_minimal(base_size = 12) +
+  ) +
+  theme_minimal() +
   theme(
     panel.background = element_rect(fill = "white", color = NA),
     plot.background  = element_rect(fill = "white", color = NA),
@@ -70,13 +86,13 @@ edu_vet_plot <- cps_edu_vet |>
     legend.position  = "bottom"
   ) +
   theme(legend.position = "none"
-        ) +
+  ) +
   scale_y_continuous(
     breaks = seq(0, 50, by = 10),
     limits = c(0, 50)
   ) 
-  
-      
+
+
 
 edu_vet_plot
 
