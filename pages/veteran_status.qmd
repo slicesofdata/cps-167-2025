@@ -58,7 +58,7 @@ Figure 2 gives us more information about the two groups of interest, non-veteran
 
 ```{r setup, message=FALSE, warning=FALSE}
 #| label: make-uemp-duration-density
-#| include: fals
+#| include: false
 #| message: false
 #| warning: false
 source(here::here("src", "figs", "final_plotting_script_daniella.R"))
