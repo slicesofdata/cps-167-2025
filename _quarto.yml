@@ -62,11 +62,13 @@ website:
 
       # adding another page
       - text: "Veteran Status" 
-        href: pages/veteran_status.qmd  # use a meaningful name 
+        href: pages/veteran_status.qmd 
       - text: "Education"
         href: pages/education.qmd 
       - text: "Race"
         href: pages/race.qmd  
+      - text: "Household Type"
+        href: pages/householdtype.qmd
 
       #- text: "Supplementary Factors"
         #menu:

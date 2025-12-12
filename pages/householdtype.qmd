@@ -1,0 +1,88 @@
+---
+title: "Discovering Labor Patterns in Household Types"
+format: html
+---
+
+Most CPS respondents live in married-couple households, while single-adult and nonfamily households make up a relatively small share of the sample. These less common household types are often the ones facing longer and more unstable unemployment durations in subsequent analyses. This chart provides the baseline distribution needed to contextualize those disparities.
+
+```{r}
+#| label: fig1
+#| fig-cap: "HouseHold Type plot"
+#| fig-align: "center"
+#| out-width: "100%"
+#| echo: false
+
+knitr::include_graphics(
+  here::here("figs", "plot1.png")
+)
+```
+
+This chart displays the average unemployment duration for each household type, revealing substantial variation in labor-market vulnerability across living arrangements. Nonfamily female households experience the longest unemployment spells (well above 20 weeks on average) highlighting the heightened economic instability faced by single adult women without additional household earners. Group-quarters residents also exhibit comparatively long unemployment durations, likely reflecting weaker labor-market attachment and reduced access to support networks. In contrast, married-couple households experience significantly shorter unemployment periods, suggesting that shared financial resources, dual income potential, and stronger job-search support help buffer against prolonged spells of joblessness. Nonfamily male households and male householders without a spouse fall in the middle of the distribution, with durations that are elevated but not as severe as those observed for their nonfamily female counterparts.
+
+```{r}
+#| label: fig2
+#| fig-cap: "HouseHold Type plot"
+#| fig-align: "center"
+#| out-width: "100%"
+#| echo: false
+
+knitr::include_graphics(
+  here::here("figs", "plot2.png")
+)
+```
+
+This grouped bar chart shows how unemployment duration differs between veterans and non-veterans across six household types. Consistent with broader evidence on veteran employment advantages, veterans tend to have shorter unemployment spells than their non-veteran counterparts. The size of this advantage varies by household structure: in high-risk groups such as nonfamily female households or male householders with no spouse, the veteran–non-veteran gap is substantial, indicating that military experience or access to veteran-specific support programs may help buffer individuals during job transitions. In more stable structures, such as married-couple households, the difference is smaller but still present. These results suggest that veteran status interacts with household structure in ways that influence labor-market resilience.
+
+```{r}
+#| label: fig3
+#| fig-cap: "HouseHold Type plot"
+#| fig-align: "center"
+#| out-width: "100%"
+#| echo: false
+
+knitr::include_graphics(
+  here::here("figs", "plot3.png")
+)
+```
+
+This grouped bar chart shows how unemployment duration differs between veterans and non-veterans across six household types. Consistent with broader evidence on veteran employment advantages, veterans tend to have shorter unemployment spells than their non-veteran counterparts. The size of this advantage varies by household structure: in high-risk groups such as nonfamily female households or male householders with no spouse, the veteran–non-veteran gap is substantial, indicating that military experience or access to veteran-specific support programs may help buffer individuals during job transitions. In more stable structures, such as married-couple households, the difference is smaller but still present. These results suggest that veteran status interacts with household structure in ways that influence labor-market resilience.
+
+```{r}
+#| label: fig4
+#| fig-cap: "HouseHold Type plot"
+#| fig-align: "center"
+#| out-width: "100%"
+#| echo: false
+
+knitr::include_graphics(
+  here::here("figs", "plot4.png")
+)
+```
+
+This faceted scatterplot illustrates how unemployment duration varies by household type across six racial categories. Despite differences in baseline unemployment patterns between racial groups, a clear structural hierarchy emerges. Nonfamily female households consistently exhibit the longest unemployment durations, often reaching 20–25 weeks on average. Married-couple households, by contrast, show the shortest durations across every racial group, underscoring the stabilizing economic effect of multi-adult households. Nonfamily male households and group-quarters residents tend to fall in the middle, with moderate but still elevated unemployment durations. The consistency of these patterns across racial categories suggests that household structure exerts a powerful and uniform influence on unemployment vulnerability, with single-adult and especially female-headed households facing the greatest risks.
+
+```{r}
+#| label: fig5
+#| fig-cap: "HouseHold Type plot"
+#| fig-align: "center"
+#| out-width: "100%"
+#| echo: false
+
+knitr::include_graphics(
+  here::here("figs", "plot5.png")
+)
+```
+
+This stacked bar chart illustrates how the total unemployment duration for each household type is distributed across education levels. Several patterns emerge. First, nonfamily female households accumulate the highest overall weeks of unemployment, with a substantial share coming from individuals with lower or mid-level educational attainment, such as high school graduates and those with some college. This points to compounded disadvantages faced by single-adult households with limited educational credentials. Second, married-couple households (the most stable economic unit) display a more balanced education composition, with smaller differences across categories and a noticeably lower total unemployment duration. Finally, households such as group-quarters and nonfamily male households fall in the middle, reflecting moderate vulnerability. Taken together, the chart underscores how education amplifies or mitigates the effects of household structure on unemployment risk.
+
+```{r}
+#| label: fig6
+#| fig-cap: "HouseHold Type plot"
+#| fig-align: "center"
+#| out-width: "100%"
+#| echo: false
+
+knitr::include_graphics(
+  here::here("figs", "plot6.png")
+)
+```

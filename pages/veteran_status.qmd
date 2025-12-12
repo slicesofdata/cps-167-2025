@@ -1,6 +1,7 @@
 ---
 title: "Discovering Labor Patterns in Veteran Status"
 ---
+Author: Daniella Reyes
 
 One of our key demographic variables is a person's veteran status. It determines our study's scope and impact for our target population and audience of interest, the United States Government. The following visualizations establish key information on the population of survey respondents that are veterans. 
 
