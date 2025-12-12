@@ -9,86 +9,103 @@ library(ggplot2)
 library(forcats)
 df_all_post_midterm <- read_rds("data/processed/cps_all_post_midterm.rds")
 
+
 ```
 
 ```{r}
-df_all_post_midterm |> 
-  count(hrhtype) |> 
+df_all_post_midterm |>
+  mutate(hrhtype = factor(hrhtype)) |>
+  count(hrhtype) |>
   mutate(
     pct = n / sum(n),
     hrhtype = fct_reorder(hrhtype, pct)
-  ) |> 
+  ) |>
   ggplot(aes(x = pct, y = hrhtype)) +
   geom_col(fill = "#1F78B4") +
-  
-  geom_label(
-    aes(label = hrhtype),
-    hjust = 0,                 
-    x = 0.001,                 
-    label.size = NA,           
-    fill = "white",            
-    alpha = 0.8,               
+  geom_text(
+    aes(label = scales::percent(pct, accuracy = 0.1)),
+    hjust = -0.1,
     size = 3.5
   ) +
-  
-  scale_x_continuous(labels = scales::percent_format()) +
+  scale_x_continuous(
+    labels = scales::percent_format(),
+    expand = expansion(mult = c(0, 0.1))
+  ) +
   labs(
     title = "Distribution of Household Types in CPS Sample",
     x = "Share of Observations",
     y = NULL
   ) +
-  theme_minimal() +
+theme_minimal() +
   theme(
-    axis.text.y = element_blank(),
-    axis.ticks.y = element_blank()
+    plot.title      = element_text(color = "grey40"),
+    plot.subtitle   = element_text(color = "grey40"),
+    plot.caption    = element_text(color = "grey40"),
+    axis.title.x    = element_text(color = "grey40"),
+    axis.title.y    = element_text(color = "grey40"),
+    axis.text.x     = element_text(color = "grey40"),
+    axis.text.y     = element_text(color = "grey40"),
+    legend.title    = element_text(color = "grey40"),
+    legend.text     = element_text(color = "grey40")
   )
-
-
+  
 ```
 
 Most CPS respondents live in married-couple households, while single-adult and nonfamily households make up a relatively small share of the sample. These less common household types are often the ones facing longer and more unstable unemployment durations in subsequent analyses. This chart provides the baseline distribution needed to contextualize those disparities.
 
 ```{r}
-df_all_post_midterm |> 
-  filter(pelaydur > 0, pelaydur <= 52) |> 
-  group_by(hrhtype) |> 
-  summarise(avg_weeks = mean(pelaydur, na.rm = TRUE), .groups = "drop") |> 
-  mutate(hrhtype = fct_reorder(hrhtype, avg_weeks)) |> 
+df_all_post_midterm |>
+  filter(pelaydur > 0, pelaydur <= 52) |>
+  mutate(hrhtype = factor(hrhtype)) |>
+  group_by(hrhtype) |>
+  summarise(
+    avg_weeks = mean(pelaydur, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  mutate(hrhtype = fct_reorder(hrhtype, avg_weeks)) |>
   ggplot(aes(x = avg_weeks, y = hrhtype)) +
   geom_col(fill = "#33A02C") +
-  
-  geom_label(
-    aes(label = hrhtype),
-    hjust = 0,                 
-    x = 0.05,                  
-    label.size = NA,          
-    fill = "white",            
-    alpha = 0.8,
-    size = 3.5
-  ) +
-  
   labs(
     title = "Average Unemployment Duration by Household Type",
     x = "Average Weeks Unemployed",
     y = NULL
   ) +
-  theme_minimal() +
+  theme_minimal() + 
   theme(
-    axis.text.y = element_blank(),
-    axis.ticks.y = element_blank()
+    plot.title      = element_text(color = "grey40"),
+    plot.subtitle   = element_text(color = "grey40"),
+    plot.caption    = element_text(color = "grey40"),
+    axis.title.x    = element_text(color = "grey40"),
+    axis.title.y    = element_text(color = "grey40"),
+    axis.text.x     = element_text(color = "grey40"),
+    axis.text.y     = element_text(color = "grey40"),
+    legend.title    = element_text(color = "grey40"),
+    legend.text     = element_text(color = "grey40")
   )
-
 
 ```
 
 This chart displays the average unemployment duration for each household type, revealing substantial variation in labor-market vulnerability across living arrangements. Nonfamily female households experience the longest unemployment spells (well above 20 weeks on average) highlighting the heightened economic instability faced by single adult women without additional household earners. Group-quarters residents also exhibit comparatively long unemployment durations, likely reflecting weaker labor-market attachment and reduced access to support networks. In contrast, married-couple households experience significantly shorter unemployment periods, suggesting that shared financial resources, dual income potential, and stronger job-search support help buffer against prolonged spells of joblessness. Nonfamily male households and male householders without a spouse fall in the middle of the distribution, with durations that are elevated but not as severe as those observed for their nonfamily female counterparts.
 
 ```{r}
-df_all_post_midterm |> 
-  filter(pelaydur > 0, pelaydur <= 52) |> 
-  group_by(hrhtype, peafever) |> 
-  summarise(avg_weeks = mean(pelaydur, na.rm = TRUE), .groups = "drop") |> 
-  ggplot(aes(x = avg_weeks, y = fct_reorder(hrhtype, avg_weeks), fill = peafever)) +
+df_all_post_midterm |>
+  filter(pelaydur > 0, pelaydur <= 52) |>
+  mutate(
+    hrhtype = factor(hrhtype),
+    peafever = factor(peafever)
+  ) |>
+  group_by(hrhtype, peafever) |>
+  summarise(
+    avg_weeks = mean(pelaydur, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  ggplot(
+    aes(
+      x = avg_weeks,
+      y = fct_reorder(hrhtype, avg_weeks),
+      fill = peafever
+    )
+  ) +
   geom_col(position = "dodge") +
   labs(
     title = "Unemployment Duration by Household Type + Veteran Status",
@@ -96,34 +113,62 @@ df_all_post_midterm |>
     y = "Household Type",
     fill = "Veteran Status"
   ) +
-  theme_minimal()
+  theme_minimal() + 
+  theme(
+    plot.title      = element_text(color = "grey40"),
+    plot.subtitle   = element_text(color = "grey40"),
+    plot.caption    = element_text(color = "grey40"),
+    axis.title.x    = element_text(color = "grey40"),
+    axis.title.y    = element_text(color = "grey40"),
+    axis.text.x     = element_text(color = "grey40"),
+    axis.text.y     = element_text(color = "grey40"),
+    legend.title    = element_text(color = "grey40"),
+    legend.text     = element_text(color = "grey40")
+  )
+  
 
 ```
 
 This grouped bar chart shows how unemployment duration differs between veterans and non-veterans across six household types. Consistent with broader evidence on veteran employment advantages, veterans tend to have shorter unemployment spells than their non-veteran counterparts. The size of this advantage varies by household structure: in high-risk groups such as nonfamily female households or male householders with no spouse, the veteran–non-veteran gap is substantial, indicating that military experience or access to veteran-specific support programs may help buffer individuals during job transitions. In more stable structures, such as married-couple households, the difference is smaller but still present. These results suggest that veteran status interacts with household structure in ways that influence labor-market resilience.
 
 ```{r}
-df_all_post_midterm |> 
-  filter(pelaydur > 0, pelaydur <= 52) |> 
-  group_by(hrhtype, ptdtrace) |> 
-  summarise(avg_weeks = mean(pelaydur, na.rm = TRUE), .groups = "drop") |> 
+df_all_post_midterm |>
+  filter(pelaydur > 0, pelaydur <= 52) |>
+  mutate(
+    hrhtype  = haven::as_factor(hrhtype),
+    ptdtrace = haven::as_factor(ptdtrace)
+  ) |>
+  group_by(hrhtype, ptdtrace) |>
+  summarise(avg_weeks = mean(pelaydur, na.rm = TRUE), .groups = "drop") |>
+  group_by(hrhtype) |>
+  mutate(overall_avg = mean(avg_weeks)) |>
+  ungroup() |>
   ggplot(aes(
     x = avg_weeks,
-    y = fct_reorder(hrhtype, avg_weeks)
+    y = fct_reorder(hrhtype, overall_avg),
+    color = ptdtrace
   )) +
-  geom_point(color = "#1F78B4", size = 3) +
+  geom_point(size = 3) +
   facet_wrap(~ ptdtrace, ncol = 3) +
+  scale_color_manual(
+    values = c(
+      "Asian" = "#871DAE",
+      "Black" = "#EE4266",
+      "Multi-racial" = "#FFD23F",
+      "Native American" = "#01BAEF",
+      "Pacific Islander" = "#223127",
+      "White" = "#0EAD69"
+    ),
+    guide = "none"
+  ) +
   labs(
-    title = "Unemployment Duration by Household Type, Split by Race",
+    title = "Unemployment Duration by Household Type, by Race",
     x = "Average Weeks Unemployed",
     y = "Household Type"
   ) +
-  theme_minimal() +
-  theme(
-    strip.text = element_text(face="bold"),
-    axis.text.y = element_text(size=8)
-  )
+  theme_minimal()
 
+  
 
 ```
 
