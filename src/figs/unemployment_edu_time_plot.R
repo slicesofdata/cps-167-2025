@@ -69,12 +69,18 @@ unemp_edu_time_plot <- edu_time |>
     y = "Mean Unemployment Duration (weeks)"
   ) +
   
-  theme_minimal(base_size = 12) +
+ theme_minimal() +
   theme(
-    panel.background    = element_rect(fill = "white", color = NA),
-    plot.background     = element_rect(fill = "white", color = NA),
-    strip.text          = element_text(face = "bold", size = 12),
-    panel.spacing.y     = unit(0.4, "lines"),
+    plot.title      = element_text(color = "grey40"),
+    plot.subtitle   = element_text(color = "grey40"),
+    plot.caption    = element_text(color = "grey40"),
+    axis.title.x    = element_text(color = "grey40"),
+    axis.title.y    = element_text(color = "grey40"),
+    axis.text.x     = element_text(color = "grey40"),
+    axis.text.y     = element_text(color = "grey40"),
+    legend.title    = element_text(color = "grey40"),
+    legend.text     = element_text(color = "grey40"),
+    legend.position = "none"
   )
 
 print(unemp_edu_time_plot)

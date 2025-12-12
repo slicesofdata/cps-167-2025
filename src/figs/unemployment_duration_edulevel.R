@@ -94,14 +94,19 @@ unemp_edu_plot <- cps_edu |>
     y = "Unemployment Duration (weeks)"
   ) +
   
-  theme_minimal(base_size = 13) +
+  theme_minimal() +
   theme(
-    legend.position  = "none",
-    axis.text.y      = element_blank(),  # remove because labels are inside
-    panel.background = element_rect(fill = "white", color = NA),
-    plot.background  = element_rect(fill = "white", color = NA)
+    plot.title      = element_text(color = "grey40"),
+    plot.subtitle   = element_text(color = "grey40"),
+    plot.caption    = element_text(color = "grey40"),
+    axis.title.x    = element_text(color = "grey40"),
+    axis.title.y    = element_text(color = "grey40"),
+    axis.text.x     = element_text(color = "grey40"),
+    axis.text.y     = element_text(color = "grey40"),
+    legend.title    = element_text(color = "grey40"),
+    legend.text     = element_text(color = "grey40"),
+    legend.position = "none"
   )
-
 
 
 
