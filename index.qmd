@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Data Viz CPS Team Website!"
+title: "About Our Project"
 page-layout: article
 format:
   html:
@@ -14,8 +14,6 @@ execute:
 ---
 
 ------------------------------------------------------------------------
-
-## About Our Project
 
 We are looking at the different labor market patterns during the Covid-19 time using the CPS dataset. Our primary focus is on impact of COVID-19 on United States Veteran Unemployment, but we are also exmaining additional intersectionality such as household type, educational background and other demographic information.
 

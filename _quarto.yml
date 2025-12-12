@@ -63,14 +63,13 @@ website:
       # adding another page
       - text: "Veteran Status" 
         href: pages/veteran_status.qmd  # use a meaningful name 
+      - text: "Education"
+        href: pages/education.qmd 
+      - text: "Race"
+        href: pages/race.qmd  
 
-      # adding a tab with dropdown menu
-      - text: "Supplementary Factors"
-        menu:
-          - text: "Education"
-            href: pages/education.qmd 
-          - text: "Race"
-            href: pages/my_third_page.qmd  
+      #- text: "Supplementary Factors"
+        #menu:
        
     right:
       - about.qmd     # to have about page here instead 

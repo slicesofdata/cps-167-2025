@@ -1,0 +1,52 @@
+---
+title: "Discovering Labor Patterns in Racial Groups"
+---
+
+```{r}
+#| include: false
+#| message: false
+#| warning: false
+source(here::here("src", "figs", "plotting.R")) 
+```
+
+Although our primary focus is on examining unemployment patterns across different veteran-status subgroups, it is valuable to incorporate race as an additional demographic variable. Race is a well-established determinant of labor-market outcomes, shaping access to employment opportunities, exposure to discrimination, educational pathways, and long-term earnings trajectories. By visualizing unemployment patterns across racial groups, we gain a deeper understanding of how these structural disparities may interact with veteran status.
+
+Including race allows us to better account for the intersectional nature of labor-market experiences. For example, the unemployment challenges faced by Black veterans may differ meaningfully from those faced by White or Hispanic veterans, even within the same veteran-status category. Without considering race, these nuanced patterns could remain obscured, potentially leading to oversimplified interpretations of unemployment trends.
+
+Incorporating race as a supplementary demographic factor therefore strengthens our analysis by acknowledging the multiple, overlapping social identities that shape individuals’ economic outcomes. It enables a more comprehensive and equitable assessment of unemployment dynamics, ensuring that policy implications derived from the project are sensitive to the diverse experiences of the veteran population.
+
+# Unemployment Duration by Racial Groups
+
+```{r}
+#| label: fig-unemp-duration-race
+#| fig-cap: "Unemployment duration by Racial Groups"
+#| fig-align: "center"
+#| out-width: "100%"
+#| echo: false
+
+knitr::include_graphics(
+  here::here("figs", "mean_race_unemploy.png")
+)
+```
+
+The line chart displays mean unemployment duration (in weeks) from 2020 to 2024 across several racial groups. Each line represents a racial category, showing how average unemployment spells have changed over time. A horizontal reference line at 15 weeks marks the threshold of long-term unemployment (according to the Bureau of Labor Statistics), helping contextualize which groups and years exceed this benchmark.
+
+This plot also highlights racial disparities in unemployment duration, particularly during the economic shocks of Covid Pandemic. While all groups experienced elevated unemployment durations during the early pandemic, the severity and pace of recovery differed across racial groups.
+
+# Proportion of Long-Term Unemployment by Racial Groups 
+```{r}
+#| label: fig-prop-longterm-duration-race
+#| fig-cap: "Proportion of Long-term unemployment by Racial Groups"
+#| fig-align: "center"
+#| out-width: "100%"
+#| echo: false
+
+knitr::include_graphics(
+  here::here("figs", "prop_race_unemploy.png")
+)
+```
+The chart visualizes the proportion of individuals experiencing long-term unemployment (defined as being unemployed for 15 weeks or more) across racial groups from 2020 to 2024. Even though the y-axis percentages are relatively small, they reflect meaningful differences in economic vulnerability. 
+
+Long-term unemployment is a crucial measure in labor-market analysis because it reflects more than just temporary job loss, it signals deeper structural barriers that prevent individuals from successfully re-entering the workforce. When someone remains unemployed for an extended period, they are more likely to experience skill deterioration, weakened professional networks, and increasing challenges in securing future employment due to employer stigma associated with long job gaps. These barriers can create a cycle in which long-term unemployed individuals face progressively fewer opportunities, making it significantly harder to regain stable employment.
+
+In addition, by using proportions rather than raw counts allows us to make meaningful comparisons across racial groups that differ in population size. Raw numbers can be misleading because a larger racial group will naturally have more individuals experiencing long-term unemployment simply due to its size, even if the risk of long-term unemployment is relatively low. Proportions standardize the measure, expressing long-term unemployment as a share of each group’s unemployed population, which enables us to evaluate disparities in likelihood rather than just absolute magnitude.

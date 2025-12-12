@@ -1,8 +1,6 @@
 ---
-title: "JaimieYu_plots_education"
+title: "Discovering Labor Patterns in Education"
 ---
-
-# Education plots
 
 Education plays a central role in shaping how workers experience unemployment, especially during periods of economic disruption. The four plots in this section work together to show that educational attainment influenced both the likelihood of becoming unemployed during COVID and the difficulty of returning to work afterward. By presenting these patterns in multiple ways, the analysis shows that education was one of the strongest and most consistent predictors of labor market resilience.
 
