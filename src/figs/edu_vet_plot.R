@@ -77,13 +77,17 @@ edu_vet_plot <- cps_edu_vet |>
       "Non-Veteran" = "#33a02c"     # green
     )
   ) +
-  theme_minimal() +
+ theme_minimal() +
   theme(
-    panel.background = element_rect(fill = "white", color = NA),
-    plot.background  = element_rect(fill = "white", color = NA),
-    strip.text       = element_text(face = "bold", size = 11),
-    axis.text.x      = element_text(angle = 0),
-    legend.position  = "bottom"
+    plot.title      = element_text(color = "grey40"),
+    plot.subtitle   = element_text(color = "grey40"),
+    plot.caption    = element_text(color = "grey40"),
+    axis.title.x    = element_text(color = "grey40"),
+    axis.title.y    = element_text(color = "grey40"),
+    axis.text.x     = element_text(color = "grey40"),
+    axis.text.y     = element_text(color = "grey40"),
+    legend.title    = element_text(color = "grey40"),
+    legend.text     = element_text(color = "grey40")
   ) +
   theme(legend.position = "none"
   ) +
