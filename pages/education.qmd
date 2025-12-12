@@ -76,11 +76,10 @@ knitr::include_graphics(
 ## #3 Unemployment Duration by Education and Veteran Status
 
 Description:
-This plot compares unemployment duration for veterans and non-veterans within each education category. By showing how these two identities intersect, it uncovers differences that are not visible in education-only comparisons. For some groups—especially those with lower education—veterans may face longer unemployment spells than non-veterans. Higher education seems to narrow these gaps.
+This plot compares unemployment duration for veterans and non-veterans within each education category. The median number for each group is written in each boxed plots. By showing how these two identities intersect, it uncovers differences that are not visible in education-only comparisons. For some groups—especially those with lower education—veterans may face longer unemployment spells than non-veterans. Higher education seems to narrow these gaps. Interestingly, we found that the veteran group with bachelor's degree has a harder time bouncing back form unemployment with a median of 12 weeks compared to the non-veteran group with bachelor's degree with a median of 8 weeks. 
 
 Why it matters:
 This plot shows that education interacts with veteran status in important ways. It demonstrates that educational disadvantage can be compounded by other demographic factors, revealing layers of inequality that influence unemployment duration.
-
 ```{r setup, message=FALSE, warning=FALSE}
 #| label: unemployment-race-veteran status
 #| include: false
