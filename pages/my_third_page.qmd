@@ -34,7 +34,7 @@ This plot also highlights racial disparities in unemployment duration, particula
 
 # Proportion of Long-Term Unemployment by Racial Groups 
 ```{r}
-#| label: fig-unemp-duration-race
+#| label: fig-prop-longterm-duration-race
 #| fig-cap: "Proportion of Long-term unemployment by racial groups"
 #| fig-align: "center"
 #| out-width: "100%"
