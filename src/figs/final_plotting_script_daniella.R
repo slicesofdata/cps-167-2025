@@ -178,7 +178,7 @@ df_labels <- df_plot |>
   )
 
 # Plot
-plot1 <- ggplot(df_plot, aes(x = year, y = n, color = Race_veteran)) +
+plot12 <- ggplot(df_plot, aes(x = year, y = n, color = Race_veteran)) +
   geom_line(size = 1.2) +
   geom_point(size = 2) +
   scale_y_continuous(labels = scales::comma,
@@ -189,9 +189,9 @@ plot1 <- ggplot(df_plot, aes(x = year, y = n, color = Race_veteran)) +
     x = "Year",
     y = "Number of Respondants"
   ) +
+  labs(color = "Veteran Status")+
   theme_minimal() +
   theme(
-    legend.position = "none",
     axis.title = element_text(size = 12),
     axis.text = element_text(size = 10),
     plot.title    = element_text(color = "grey40"),
@@ -202,8 +202,6 @@ plot1 <- ggplot(df_plot, aes(x = year, y = n, color = Race_veteran)) +
     legend.title  = element_text(color = "grey40"),
     legend.text   = element_text(color = "grey40")
   )
-
-plot12 <-directlabels::direct.label(plot1, "angled.boxes")
 plot12
 
 ################################################################################

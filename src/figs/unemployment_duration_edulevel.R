@@ -62,7 +62,7 @@ unemp_edu_plot <- cps_edu |>
       label = edu
     ),
     inherit.aes = FALSE,
-    color = "black",
+    color = "white",
     size  = 4,
   ) +
   
@@ -76,6 +76,10 @@ unemp_edu_plot <- cps_edu |>
     color = "red",
     linewidth = 1,
     linetype = "dashed"
+  ) +
+  scale_y_continuous(
+    breaks = seq(0, 55, by = 5),
+    limits = c(0, 55)
   ) +
   # text label for the median line
   annotate(
@@ -94,8 +98,12 @@ unemp_edu_plot <- cps_edu |>
     y = "Unemployment Duration (weeks)"
   ) +
   
-  theme_minimal() +
+  theme_minimal(base_size = 13) +
   theme(
+    legend.position  = "none",
+    axis.text.y      = element_blank(),  # remove because labels are inside
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.background  = element_rect(fill = "white", color = NA),
     plot.title      = element_text(color = "grey40"),
     plot.subtitle   = element_text(color = "grey40"),
     plot.caption    = element_text(color = "grey40"),
@@ -104,8 +112,7 @@ unemp_edu_plot <- cps_edu |>
     axis.text.x     = element_text(color = "grey40"),
     axis.text.y     = element_text(color = "grey40"),
     legend.title    = element_text(color = "grey40"),
-    legend.text     = element_text(color = "grey40"),
-    legend.position = "none"
+    legend.text     = element_text(color = "grey40")
   )
 
 
