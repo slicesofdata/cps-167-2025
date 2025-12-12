@@ -45,7 +45,7 @@ knitr::include_graphics(
 
 ## #2 Unemployment Duration Over Time by Education
 
-This time-series plot tracks how unemployment duration changed for each education group from 2019 to 2024. The curves show how all groups experienced a sharp rise in unemployment duration in 2020, followed by very different recovery paths. College-educated workers recovered relatively quickly, while workers with only a high school degree or less saw a slower and more uneven decline.
+This time-series plot tracks how unemployment duration changed for each education group from 2019 to 2024. The curves show how all groups experienced a sharp rise in unemployment duration in 2020, followed by very different recovery paths. College-educated workers recovered relatively quickly, while workers with only a high school degree or less saw a slower and more uneven decline. Interestingly, we saw another sharp increase for the group with doctorate degree. 
 
 Why it matters: This plot shifts the analysis from levels to trajectories. It reveals which education levels “bounced back” the fastest and shows that the long-term effects of the pandemic were far more persistent for lower-educated workers.
 
@@ -85,7 +85,7 @@ source(here::here("src", "figs", "edu_vet_plot.R"))
 
 ```{r}
 #| label: unemploymentduration_race_vetstatus
-#| fig-cap: "unemployemtn duration by education and veteran status"
+#| fig-cap: "unemployment duration by education and veteran status"
 #| fig-align: "center"
 #| out-width: "70%"
 #| echo: false
