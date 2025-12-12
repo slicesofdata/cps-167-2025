@@ -61,7 +61,7 @@ source(here::here("src", "figs", "unemployment_edu_time_plot.R"))
 #| label: fig-unemp-duration-edu-overtime
 #| fig-cap: "Unemployment duration by education level overtime"
 #| fig-align: "center"
-#| out-width: "70%"
+#| out-width: "80%"
 #| echo: false
 
 knitr::include_graphics(
@@ -87,7 +87,7 @@ source(here::here("src", "figs", "edu_vet_plot.R"))
 #| label: unemploymentduration_race_vetstatus
 #| fig-cap: "unemployment duration by education and veteran status"
 #| fig-align: "center"
-#| out-width: "70%"
+#| out-width: "80%"
 #| echo: false
 
 knitr::include_graphics(
