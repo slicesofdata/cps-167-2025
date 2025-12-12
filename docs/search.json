@@ -2,14 +2,14 @@
   {
     "objectID": "pages/veteran_status.html",
     "href": "pages/veteran_status.html",
-    "title": "PSYC167 Group Project - CPS",
+    "title": "Analyzing the Impact of COVID-19 on United States Veteran Unemployment",
     "section": "",
     "text": "One of our key demographic variables is a person’s veteran status. It determines our study’s scope and impact for our target population and audience of interest, the United States Government. The following visualizations establish key information on the population of survey respondents that are veterans. \n\n\n\n\n\n\n\n\nFigure 1: Figure 1: Count of Respondents and their Veteran status.\n\n\n\n\n\nIn 2023, the United States reported having a total of 15.8 American veterans. They receive support from the United States Department of Government Affairs, including services like housing, healthcare, and employment support. Given it is a large federal department, they budgeted 441.3 billion for the 2026 Fiscal Year. \nFigure 1 demonstrates the amount of respondents and their status as either a veteran or having never served for the United States government. The Community Population Survey (CPS) fails to capture all of the household who identify as veterans or non-veterans. They take a sample of American households, meaning that the number of veterans reported by CPS is much less than the government’s reported number. CPS respondents are largely non-veterans or of unknown status. Notably, the number of respondents in 2023 increased for both groups, while veteran respondents remained largely stable.\n\n\n\n\n\n\n\n\nFigure 2: Figure 2: Count of Respondents and their Veteran and Race Demographics\n\n\n\n\n\nFigure 2 gives us more information about the two groups of interest, non-veterans and veterans. The visualization further divides the variables by the race of the respondents, breaking it down into white and non-white. This study will discuss the role of race further in a separate page. Figure 2 emphasizes the discrepancies among the different demographics in the CPS respondents. White groups are the largest group responding to CPS and Non-White respondents are the fewest. \n\n\n\n\n\n\n\n\nFigure 3: Figure 3: Unemployment Duration (in weeks) Density Distribution Across Veteran Status\n\n\n\n\n\nReturning to the analysis of the veteran and non-veteran variable, Figure 3 compares the two groups and the shape of the data across their unemployment duration. Both groups have a larger density of respondents report their unemployment lasting under 10 weeks. From there, the density decreases until a slight increase at 50 weeks. The non-veteran group has slightly more variation after the 10 week mark. \n\n\n\n\n\n\n\n\nFigure 4: Figure 4: Proportion of People Unemployed for 9 Weeks, 2020-2024\n\n\n\n\n\nFollowing figure 3, the team discovered that the median weeks of unemployment duration, across both groups, is 9 weeks. Figure 4 works off this finding to see how the proportion of people who are either veterans or not changes across our time frame of interest at the 9 week mark. The majority of people unemployed for 9 weeks are non-veterans, this is to be expected as the majority of respondents are non-veterans. Interestingly, the proportion of veterans unemployed for 9 weeks noticeably increases in 2022, with slightly under one fourth of respondents being veterans.\nThe remaining analysis will dive into more depth about how unemployment impacts different demographic groups and connecting it back to the variable of veteran status."
   },
   {
     "objectID": "pages/veteran_status.html#discovering-patterns-in-veteran-status",
     "href": "pages/veteran_status.html#discovering-patterns-in-veteran-status",
-    "title": "PSYC167 Group Project - CPS",
+    "title": "Analyzing the Impact of COVID-19 on United States Veteran Unemployment",
     "section": "",
     "text": "One of our key demographic variables is a person’s veteran status. It determines our study’s scope and impact for our target population and audience of interest, the United States Government. The following visualizations establish key information on the population of survey respondents that are veterans. \n\n\n\n\n\n\n\n\nFigure 1: Figure 1: Count of Respondents and their Veteran status.\n\n\n\n\n\nIn 2023, the United States reported having a total of 15.8 American veterans. They receive support from the United States Department of Government Affairs, including services like housing, healthcare, and employment support. Given it is a large federal department, they budgeted 441.3 billion for the 2026 Fiscal Year. \nFigure 1 demonstrates the amount of respondents and their status as either a veteran or having never served for the United States government. The Community Population Survey (CPS) fails to capture all of the household who identify as veterans or non-veterans. They take a sample of American households, meaning that the number of veterans reported by CPS is much less than the government’s reported number. CPS respondents are largely non-veterans or of unknown status. Notably, the number of respondents in 2023 increased for both groups, while veteran respondents remained largely stable.\n\n\n\n\n\n\n\n\nFigure 2: Figure 2: Count of Respondents and their Veteran and Race Demographics\n\n\n\n\n\nFigure 2 gives us more information about the two groups of interest, non-veterans and veterans. The visualization further divides the variables by the race of the respondents, breaking it down into white and non-white. This study will discuss the role of race further in a separate page. Figure 2 emphasizes the discrepancies among the different demographics in the CPS respondents. White groups are the largest group responding to CPS and Non-White respondents are the fewest. \n\n\n\n\n\n\n\n\nFigure 3: Figure 3: Unemployment Duration (in weeks) Density Distribution Across Veteran Status\n\n\n\n\n\nReturning to the analysis of the veteran and non-veteran variable, Figure 3 compares the two groups and the shape of the data across their unemployment duration. Both groups have a larger density of respondents report their unemployment lasting under 10 weeks. From there, the density decreases until a slight increase at 50 weeks. The non-veteran group has slightly more variation after the 10 week mark. \n\n\n\n\n\n\n\n\nFigure 4: Figure 4: Proportion of People Unemployed for 9 Weeks, 2020-2024\n\n\n\n\n\nFollowing figure 3, the team discovered that the median weeks of unemployment duration, across both groups, is 9 weeks. Figure 4 works off this finding to see how the proportion of people who are either veterans or not changes across our time frame of interest at the 9 week mark. The majority of people unemployed for 9 weeks are non-veterans, this is to be expected as the majority of respondents are non-veterans. Interestingly, the proportion of veterans unemployed for 9 weeks noticeably increases in 2022, with slightly under one fourth of respondents being veterans.\nThe remaining analysis will dive into more depth about how unemployment impacts different demographic groups and connecting it back to the variable of veteran status."
   },
@@ -40,6 +40,48 @@
     "title": "JaimieYu_plots_education",
     "section": "",
     "text": "Description: This plot compares unemployment duration for veterans and non-veterans within each education category. The median number for each group is written in each boxed plots. By showing how these two identities intersect, it uncovers differences that are not visible in education-only comparisons. For some groups—especially those with lower education—veterans may face longer unemployment spells than non-veterans. Higher education seems to narrow these gaps. Interestingly, we found that the veteran group with bachelor’s degree has a harder time bouncing back form unemployment with a median of 12 weeks compared to the non-veteran group with bachelor’s degree with a median of 8 weeks.\nWhy it matters: This plot shows that education interacts with veteran status in important ways. It demonstrates that educational disadvantage can be compounded by other demographic factors, revealing layers of inequality that influence unemployment duration.\n\n\n\n\n\nunemployemtn duration by education and veteran status"
+  },
+  {
+    "objectID": "blog/posts/firstpost.html",
+    "href": "blog/posts/firstpost.html",
+    "title": "My great title",
+    "section": "",
+    "text": "My post text goes here …"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Meet The Team",
+    "section": "",
+    "text": "We are the Data Visualization CPS Project Team, responsible for analyzing and visualizing CPS data for our Data Visualization class. Our goal is to turn complex datasets into clear, engaging visuals that effectively communicate key insights and patterns to our audience.\n\n\n\n\n\n\n\n\n\nTanveer Chabba\nDaniella Reyes\nJaimie Yu\nJessica Lin\n\n\n\n\n\n\n\n\n(CMC ’26)\nProject Manager\n(CMC ’26)\nCoding Lead\n(CMC ’26)\nCoding Support\n(PZ ’26)\nWriting Lead"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "My blog",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMy great title\n\n\n\ndata\n\ndogs\n\nanimals\n\n\n\n\n\n\n\n\n\nJan 1, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#about-our-project",
+    "href": "index.html#about-our-project",
+    "title": "Welcome to Data Viz CPS Team Website!",
+    "section": "About Our Project",
+    "text": "About Our Project\nWe are looking at the different labor market patterns during the Covid-19 time using the CPS dataset. Our primary focus is on impact of COVID-19 on United States Veteran Unemployment, but we are also exmaining additional intersectionality such as household type, educational background and other demographic information."
+  },
+  {
+    "objectID": "index.html#u.s.-government-current-population-survey-cps",
+    "href": "index.html#u.s.-government-current-population-survey-cps",
+    "title": "Welcome to Data Viz CPS Team Website!",
+    "section": "U.S. Government Current Population Survey (CPS)",
+    "text": "U.S. Government Current Population Survey (CPS)\nCurrent Population Survey, commonly referred to as the CPS, is conducted jointly by two major U.S. government agencies, the U.S. Census Bureau and the Bureau of Labor Statistics, or BLS.\nThe CPS is a monthly household survey designed to measure key aspects of the labor market and demographic information.\nFor each month, it collects data from around 60,000 households, representing millions of individuals nationwide. The dataset covers a wide range of variables as well, including employment and unemployment status, income, educational background, household structures, and other demographic characteristics. Because of this rich demographic variables, the CPS is one of the few datasets that allow researchers to examine not only broad labor market trends, but also the distributional impacts on different diverse groups.\nIt has also maintained a consistent survey design since the 1940s, which allows researchers to make meaningful comparisons over time and track how labor markets respond to major events and economic recession for example Covid-19 which is the main focus of our group"
+  },
+  {
+    "objectID": "index.html#our-data-analysis-focus",
+    "href": "index.html#our-data-analysis-focus",
+    "title": "Welcome to Data Viz CPS Team Website!",
+    "section": "Our Data Analysis Focus",
+    "text": "Our Data Analysis Focus\nOur project focuses on understanding the impact of major events on unemployment recovery, with an emphasis on identifying who recovered and why. The analysis seeks to capture how factors such as economic resilience, social structure, and individual resources shaped different recovery experiences.\n\nCovid-19 Pandemic\nThe analysis centers on the Covid-19 pandemic period and the subsequent recovery phase, capturing how unemployment trends evolved as the economy reopened. This timeline allows for comparison between the height of pandemic-related job losses and the gradual return to employment, providing insights into long-term recovery and disparities that persisted beyond the immediate crisis.\n\n\nVariables\nOverall CPS variables dictionary\nThe Current population survey household data contains a wide range of variables, and to further explore these dynamics, several key variables from the data were selected:\n\nptdtrace – Race\npeeduca – Highest Education Background\nprtgage – Age\npelaydur – Unemployment Duration (in weeks)\nhrhtype – Household Type\npeafever – Veteran Status\n\nThese variables together capture demographic, socioeconomic, and structural characteristics that influence how individuals and communities experienced unemployment recovery during and after the pandemic."
   },
   {
     "objectID": "pages/my_third_page.html",

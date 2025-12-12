@@ -25,7 +25,7 @@ project:
     navigate: true
 
 website:
-  title: "PSYC167 Group Project - CPS" 
+  title: "Effects of COVID-19 Pandemic on Labor Statistics"
   
   # site-url: ""
   # add optional favicon 
@@ -61,7 +61,7 @@ website:
        # href: index.qmd
 
       # adding another page
-      - text: "Main Finding" 
+      - text: "Veteran Status" 
         href: pages/veteran_status.qmd  # use a meaningful name 
 
       # adding a tab with dropdown menu
