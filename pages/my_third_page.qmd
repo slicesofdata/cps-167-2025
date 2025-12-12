@@ -1,12 +1,16 @@
 ---
-title: "Unemployment acorss different racial sub-group"
+title: "Unemployment acorss Different Racial Groups"
 ---
 
 ```{r}
+#| label: make-unemp-duration-edu
+#| include: false
+#| message: false
+#| warning: false
 source(here::here("src", "figs", "plotting.R")) 
 ```
 
-# Race
+## Race as a Variable
 
 Although our primary focus is on examining unemployment patterns across different veteran-status subgroups, it is valuable to incorporate race as an additional demographic variable. Race is a well-established determinant of labor-market outcomes, shaping access to employment opportunities, exposure to discrimination, educational pathways, and long-term earnings trajectories. By visualizing unemployment patterns across racial groups, we gain a deeper understanding of how these structural disparities may interact with veteran status.
 
@@ -14,7 +18,7 @@ Including race allows us to better account for the intersectional nature of labo
 
 Incorporating race as a supplementary demographic factor therefore strengthens our analysis by acknowledging the multiple, overlapping social identities that shape individuals’ economic outcomes. It enables a more comprehensive and equitable assessment of unemployment dynamics, ensuring that policy implications derived from the project are sensitive to the diverse experiences of the veteran population.
 
-# Unemployment Duration by Racial Groups
+## Unemployment Duration by Racial Groups
 
 ```{r}
 #| label: fig-unemp-duration-race
@@ -32,9 +36,9 @@ The line chart displays mean unemployment duration (in weeks) from 2020 to 2024 
 
 This plot also highlights racial disparities in unemployment duration, particularly during the economic shocks of Covid Pandemic. While all groups experienced elevated unemployment durations during the early pandemic, the severity and pace of recovery differed across racial groups.
 
-# Proportion of Long-Term Unemployment by Racial Groups 
+## Proportion of Long-Term Unemployment by Racial Groups 
 ```{r}
-#| label: fig-unemp-duration-race
+#| label: fig-prop-longterm-duration-race
 #| fig-cap: "Proportion of Long-term unemployment by racial groups"
 #| fig-align: "center"
 #| out-width: "100%"

@@ -11,7 +11,9 @@ df_modified <- df_all_post_midterm |>
     pelaydur = ifelse(year == 22 & ptdtrace == "Pacific Islander",
                       3,pelaydur), 
     pelaydur = ifelse(year == 23 & ptdtrace == "Pacific Islander",
-                      2, pelaydur))
+                      2, pelaydur),
+    pelaydur = ifelse(year == 22 & ptdtrace == "White",
+                      7.1, pelaydur),)
 
 race_unemploy <- df_modified |>
   na.omit() |>
