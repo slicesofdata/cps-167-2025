@@ -10,16 +10,16 @@ The second plot expands this story by adding a time dimension. Instead of compar
 
 The third plot looks at how education interacts with another important demographic factor: veteran status. By examining unemployment duration for veterans and non-veterans within each education category, the plot highlights that education does not operate in isolation. Some groups, such as veterans with lower education, appear to face compounded difficulties, while higher education narrows gaps between veterans and non-veterans. This comparison helps show that educational disadvantage can intersect with other identity factors to create deeper inequality in labor market outcomes.
 
-
 ## #1 Unemployment Duration by Education Level
+
 This plot compares unemployment duration across workers with different levels of educational attainment. The boxplots display the distribution of unemployment spells for each education group, allowing us to observe both the spread and central tendencies. We also added a red dashed line indicating the overall median unemployment duration across all groups, which helps visually compare how each education category deviates from the national median.
 
-Contrary to expectations that individuals with lower education would face the longest unemployment spells, the graph shows that high school graduates, individuals with some high school education but no diploma, and even those with a bachelor’s degree have median unemployment durations that fall above the overall median of roughly 10 weeks. This suggests that unemployment challenges during the COVID period did not fall strictly along a simple “more education equals shorter unemployment” pattern. 
+Contrary to expectations that individuals with lower education would face the longest unemployment spells, the graph shows that high school graduates, individuals with some high school education but no diploma, and even those with a bachelor’s degree have median unemployment durations that fall above the overall median of roughly 10 weeks. This suggests that unemployment challenges during the COVID period did not fall strictly along a simple “more education equals shorter unemployment” pattern.
 
-Why it matters:
-This visualization provides an important baseline for understanding how education level shapes labor-market vulnerability. While prior research and intuition often suggest that lower-educated workers experience longer unemployment spells, this plot shows that several groups across both lower and higher education categories were significantly affected.
+Why it matters: This visualization provides an important baseline for understanding how education level shapes labor-market vulnerability. While prior research and intuition often suggest that lower-educated workers experience longer unemployment spells, this plot shows that several groups across both lower and higher education categories were significantly affected.
 
 This nuance is especially meaningful in the context of COVID-19 recovery. The pandemic disrupted industries unevenly, and this pattern of unemployment duration suggests that both lower-skilled and some higher-skilled workers faced prolonged difficulties reentering the workforce. Identifying these disparities helps policymakers and researchers better understand which educational groups were hit hardest and who may need targeted interventions to support employment recovery.
+
 ```{r setup, message=FALSE, warning=FALSE}
 #| label: make-unemp-duration-edu
 #| include: false
@@ -29,8 +29,6 @@ This nuance is especially meaningful in the context of COVID-19 recovery. The pa
 source(here::here("src", "figs", "unemployment_duration_edulevel.R"))
 
 ```
-
-
 
 ```{r}
 #| label: fig-unemp-duration-edu
@@ -44,12 +42,11 @@ knitr::include_graphics(
 )
 ```
 
-
 ## #2 Unemployment Duration Over Time by Education
+
 This time-series plot tracks how unemployment duration changed for each education group from 2019 to 2024. The curves show how all groups experienced a sharp rise in unemployment duration in 2020, followed by very different recovery paths. College-educated workers recovered relatively quickly, while workers with only a high school degree or less saw a slower and more uneven decline.
 
-Why it matters:
-This plot shifts the analysis from levels to trajectories. It reveals which education levels “bounced back” the fastest and shows that the long-term effects of the pandemic were far more persistent for lower-educated workers.
+Why it matters: This plot shifts the analysis from levels to trajectories. It reveals which education levels “bounced back” the fastest and shows that the long-term effects of the pandemic were far more persistent for lower-educated workers.
 
 ```{r setup, message=FALSE, warning=FALSE}
 #| label: make-unemp-duration-edu-overtime
@@ -73,11 +70,10 @@ knitr::include_graphics(
 
 ## #3 Unemployment Duration by Education and Veteran Status
 
-Description:
-This plot compares unemployment duration for veterans and non-veterans within each education category. The median number for each group is written in each boxed plots. By showing how these two identities intersect, it uncovers differences that are not visible in education-only comparisons. For some groups—especially those with lower education—veterans may face longer unemployment spells than non-veterans. Higher education seems to narrow these gaps. Interestingly, we found that the veteran group with bachelor's degree has a harder time bouncing back form unemployment with a median of 12 weeks compared to the non-veteran group with bachelor's degree with a median of 8 weeks. 
+Description: This plot compares unemployment duration for veterans and non-veterans within each education category. The median number for each group is written in each boxed plots. By showing how these two identities intersect, it uncovers differences that are not visible in education-only comparisons. For some groups—especially those with lower education—veterans may face longer unemployment spells than non-veterans. Higher education seems to narrow these gaps. Interestingly, we found that the veteran group with bachelor's degree has a harder time bouncing back form unemployment with a median of 12 weeks compared to the non-veteran group with bachelor's degree with a median of 8 weeks.
 
-Why it matters:
-This plot shows that education interacts with veteran status in important ways. It demonstrates that educational disadvantage can be compounded by other demographic factors, revealing layers of inequality that influence unemployment duration.
+Why it matters: This plot shows that education interacts with veteran status in important ways. It demonstrates that educational disadvantage can be compounded by other demographic factors, revealing layers of inequality that influence unemployment duration.
+
 ```{r setup, message=FALSE, warning=FALSE}
 #| label: unemployment-race-veteran status
 #| include: false
@@ -97,4 +93,3 @@ knitr::include_graphics(
   here::here("figs", "unemp_edu_veteran.png")
 )
 ```
-
