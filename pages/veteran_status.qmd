@@ -1,5 +1,4 @@
 ---
-title: "veteran_status"
 ---
 
 ## **Discovering Patterns in Veteran Status**
@@ -24,7 +23,7 @@ source(here::here("src", "figs", "final_plotting_script_daniella.R"))
 #| echo: false
 
 knitr::include_graphics(
-  here::here("figs", "Total_Respondents_Across_Years.png")
+  here::here("src", "figs", "Total_Respondents_Across_Years.png")
 )
 ```
 
@@ -50,7 +49,7 @@ source(here::here("src", "figs", "final_plotting_script_daniella.R"))
 #| echo: false
 
 knitr::include_graphics(
-  here::here("figs", "Total_Respondants_Across_Year_Divded_by_Race_and_Veteran_Status.png")
+  here::here("src", "figs", "Total_Respondants_Across_Year_Divded_by_Race_and_Veteran_Status.png")
 )
 ```
 
@@ -72,7 +71,7 @@ source(here::here("src", "figs", "final_plotting_script_daniella.R"))
 #| echo: false
 
 knitr::include_graphics(
-  here::here("figs", "Unemployment_Duration Distribution_by_Veteran_Status.png")
+  here::here("src","figs", "Unemployment_Duration Distribution_by_Veteran_Status.png")
 )
 ```
 
@@ -94,7 +93,7 @@ source(here::here("src", "figs", "final_plotting_script_daniella.R"))
 #| echo: false
 
 knitr::include_graphics(
-  here::here("figs", "Median_proportion_plot.png")
+  here::here("src","figs", "Median_proportion_plot.png")
 )
 ```
 
