@@ -17,7 +17,7 @@ source(here::here("src", "figs", "final_plotting_script_daniella.R"))
 
 ```{r}
 #| label: fig-countvet
-#| fig-cap: "Figure 1: Count of Respondents and their Veteran status."
+#| fig-cap: "Count of Respondents and their Veteran status."
 #| fig-align: "center"
 #| out-width: "100%"
 #| echo: false
@@ -43,7 +43,7 @@ source(here::here("src", "figs", "final_plotting_script_daniella.R"))
 
 ```{r}
 #| label: fig-unemp-duration-race
-#| fig-cap: "Figure 2: Count of Respondents and their Veteran and Race Demographics"
+#| fig-cap: "Count of Respondents and their Veteran and Race Demographics"
 #| fig-align: "center"
 #| out-width: "100%"
 #| echo: false
@@ -65,7 +65,7 @@ source(here::here("src", "figs", "final_plotting_script_daniella.R"))
 
 ```{r}
 #| label: fig-unemploymentduration-race-vetstatus
-#| fig-cap: "Figure 3: Unemployment Duration (in weeks) Density Distribution Across Veteran Status"
+#| fig-cap: "Unemployment Duration (in weeks) Density Distribution Across Veteran Status"
 #| fig-align: "center"
 #| out-width: "70%"
 #| echo: false
@@ -87,7 +87,7 @@ source(here::here("src", "figs", "final_plotting_script_daniella.R"))
 
 ```{r}
 #| label: fig-unemploymentduration-pro
-#| fig-cap: "Figure 4: Proportion of People Unemployed for 9 Weeks, 2020-2024"
+#| fig-cap: "Proportion of People Unemployed for 9 Weeks, 2020-2024"
 #| fig-align: "center"
 #| out-width: "70%"
 #| echo: false
