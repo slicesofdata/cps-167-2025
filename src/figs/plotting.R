@@ -4,7 +4,6 @@ source(here::here("src","functions","save_plot_png.R"))
 library(directlabels)
 
 df_all_post_midterm <- readRDS(here::here("data","processed", "cps_all_post_midterm.rds"))
-df_complete<- readRDS(here::here("data", "processed", "data_cleaned.Rds"))
 
 df_modified <- df_all_post_midterm |>
   mutate(
