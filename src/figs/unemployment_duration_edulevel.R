@@ -52,7 +52,7 @@ unemp_edu_plot <- cps_edu |>
   geom_boxplot(outlier.shape = NA) +
   coord_flip() +
   geom_boxplot(fill = "#3E53BD", outlier.shape = NA
-               ) +
+  ) +
   # --- LABELS INSIDE BOXES ---
   geom_text(
     data = edu_medians,
@@ -104,19 +104,18 @@ unemp_edu_plot <- cps_edu |>
     axis.text.y      = element_blank(),  # remove because labels are inside
     panel.background = element_rect(fill = "white", color = NA),
     plot.background  = element_rect(fill = "white", color = NA),
-    plot.title      = element_text(color = "grey40"),
-    plot.subtitle   = element_text(color = "grey40"),
-    plot.caption    = element_text(color = "grey40"),
-    axis.title.x    = element_text(color = "grey40"),
-    axis.title.y    = element_text(color = "grey40"),
-    axis.text.x     = element_text(color = "grey40"),
-    axis.text.y     = element_text(color = "grey40"),
-    legend.title    = element_text(color = "grey40"),
-    legend.text     = element_text(color = "grey40")
+    plot.title       = element_text(color = "grey40"),
+    plot.subtitle    = element_text(color = "grey40"),
+    plot.caption     = element_text(color = "grey40"),
+    axis.title.x     = element_text(color = "grey40"),
+    axis.title.y     = element_text(color = "grey40"),
+    axis.text.x      = element_text(color = "grey40"),
+    legend.title     = element_text(color = "grey40"),
+    legend.text      = element_text(color = "grey40")
   )
 
 
-
+print(unemp_edu_plot)
 ################################################################################
 # Save plot
 
