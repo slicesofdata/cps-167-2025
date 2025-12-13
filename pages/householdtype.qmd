@@ -1,0 +1,180 @@
+---
+title: "housholdtype"
+editor: visual
+---
+
+```{r}
+library(tidyverse)   # includes ggplot2, dplyr, readr, forcats, etc.
+library(ggplot2)
+library(forcats)
+df_all_post_midterm <- read_rds("data/processed/cps_all_post_midterm.rds")
+
+```
+
+```{r}
+if(FALSE) { #Commenting out this chunk to render website
+df_all_post_midterm |> 
+  count(hrhtype) |> 
+  mutate(
+    pct = n / sum(n),
+    hrhtype = fct_reorder(hrhtype, pct)
+  ) |> 
+  ggplot(aes(x = pct, y = hrhtype)) +
+  geom_col(fill = "#1F78B4") +
+  
+  geom_label(
+    aes(label = hrhtype),
+    hjust = 0,                 
+    x = 0.001,                 
+    label.size = NA,           
+    fill = "white",            
+    alpha = 0.8,               
+    size = 3.5
+  ) +
+  
+  scale_x_continuous(labels = scales::percent_format()) +
+  labs(
+    title = "Distribution of Household Types in CPS Sample",
+    x = "Share of Observations",
+    y = NULL
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+}
+
+```
+
+Most CPS respondents live in married-couple households, while single-adult and nonfamily households make up a relatively small share of the sample. These less common household types are often the ones facing longer and more unstable unemployment durations in subsequent analyses. This chart provides the baseline distribution needed to contextualize those disparities.
+
+```{r}
+if(FALSE) { #Commenting out this chunk to render website
+df_all_post_midterm |> 
+  filter(pelaydur > 0, pelaydur <= 52) |> 
+  group_by(hrhtype) |> 
+  summarise(avg_weeks = mean(pelaydur, na.rm = TRUE), .groups = "drop") |> 
+  mutate(hrhtype = fct_reorder(hrhtype, avg_weeks)) |> 
+  ggplot(aes(x = avg_weeks, y = hrhtype)) +
+  geom_col(fill = "#33A02C") +
+  
+  geom_label(
+    aes(label = hrhtype),
+    hjust = 0,                 
+    x = 0.05,                  
+    label.size = NA,          
+    fill = "white",            
+    alpha = 0.8,
+    size = 3.5
+  ) +
+  
+  labs(
+    title = "Average Unemployment Duration by Household Type",
+    x = "Average Weeks Unemployed",
+    y = NULL
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+}
+
+```
+
+This chart displays the average unemployment duration for each household type, revealing substantial variation in labor-market vulnerability across living arrangements. Nonfamily female households experience the longest unemployment spells (well above 20 weeks on average) highlighting the heightened economic instability faced by single adult women without additional household earners. Group-quarters residents also exhibit comparatively long unemployment durations, likely reflecting weaker labor-market attachment and reduced access to support networks. In contrast, married-couple households experience significantly shorter unemployment periods, suggesting that shared financial resources, dual income potential, and stronger job-search support help buffer against prolonged spells of joblessness. Nonfamily male households and male householders without a spouse fall in the middle of the distribution, with durations that are elevated but not as severe as those observed for their nonfamily female counterparts.
+
+```{r}
+if(FALSE) { #Commenting out this chunk to render website
+df_all_post_midterm |> 
+  filter(pelaydur > 0, pelaydur <= 52) |> 
+  group_by(hrhtype, peafever) |> 
+  summarise(avg_weeks = mean(pelaydur, na.rm = TRUE), .groups = "drop") |> 
+  ggplot(aes(x = avg_weeks, y = fct_reorder(hrhtype, avg_weeks), fill = peafever)) +
+  geom_col(position = "dodge") +
+  labs(
+    title = "Unemployment Duration by Household Type + Veteran Status",
+    x = "Average Weeks Unemployed",
+    y = "Household Type",
+    fill = "Veteran Status"
+  ) +
+  theme_minimal()
+}
+```
+
+This grouped bar chart shows how unemployment duration differs between veterans and non-veterans across six household types. Consistent with broader evidence on veteran employment advantages, veterans tend to have shorter unemployment spells than their non-veteran counterparts. The size of this advantage varies by household structure: in high-risk groups such as nonfamily female households or male householders with no spouse, the veteran–non-veteran gap is substantial, indicating that military experience or access to veteran-specific support programs may help buffer individuals during job transitions. In more stable structures, such as married-couple households, the difference is smaller but still present. These results suggest that veteran status interacts with household structure in ways that influence labor-market resilience.
+
+```{r}
+if(FALSE) { #Commenting out this chunk to render website
+df_all_post_midterm |> 
+  filter(pelaydur > 0, pelaydur <= 52) |> 
+  group_by(hrhtype, ptdtrace) |> 
+  summarise(avg_weeks = mean(pelaydur, na.rm = TRUE), .groups = "drop") |> 
+  ggplot(aes(
+    x = avg_weeks,
+    y = fct_reorder(hrhtype, avg_weeks)
+  )) +
+  geom_point(color = "#1F78B4", size = 3) +
+  facet_wrap(~ ptdtrace, ncol = 3) +
+  labs(
+    title = "Unemployment Duration by Household Type, Split by Race",
+    x = "Average Weeks Unemployed",
+    y = "Household Type"
+  ) +
+  theme_minimal() +
+  theme(
+    strip.text = element_text(face="bold"),
+    axis.text.y = element_text(size=8)
+  )
+
+}
+```
+
+This faceted scatterplot illustrates how unemployment duration varies by household type across six racial categories. Despite differences in baseline unemployment patterns between racial groups, a clear structural hierarchy emerges. Nonfamily female households consistently exhibit the longest unemployment durations, often reaching 20–25 weeks on average. Married-couple households, by contrast, show the shortest durations across every racial group, underscoring the stabilizing economic effect of multi-adult households. Nonfamily male households and group-quarters residents tend to fall in the middle, with moderate but still elevated unemployment durations. The consistency of these patterns across racial categories suggests that household structure exerts a powerful and uniform influence on unemployment vulnerability, with single-adult and especially female-headed households facing the greatest risks.
+
+```{r}
+if(FALSE) { #Commenting out this chunk to render website
+df_all_post_midterm |> 
+  filter(pelaydur > 0, pelaydur <= 52) |> 
+  group_by(hrhtype, edu) |> 
+  summarise(avg_weeks = mean(pelaydur, na.rm = TRUE), .groups = "drop") |> 
+  ggplot(aes(
+    x = avg_weeks, 
+    y = fct_reorder(hrhtype, avg_weeks),
+    fill = edu
+  )) +
+  geom_col(position = "stack") +
+  labs(
+    title = "Education Composition of Unemployment Duration by Household Type",
+    x = "Combined Avg Weeks Unemployed",
+    y = "Household Type",
+    fill = "Education Level"
+  ) +
+  theme_minimal()
+}
+```
+
+This stacked bar chart illustrates how the total unemployment duration for each household type is distributed across education levels. Several patterns emerge. First, nonfamily female households accumulate the highest overall weeks of unemployment, with a substantial share coming from individuals with lower or mid-level educational attainment, such as high school graduates and those with some college. This points to compounded disadvantages faced by single-adult households with limited educational credentials. Second, married-couple households (the most stable economic unit) display a more balanced education composition, with smaller differences across categories and a noticeably lower total unemployment duration. Finally, households such as group-quarters and nonfamily male households fall in the middle, reflecting moderate vulnerability. Taken together, the chart underscores how education amplifies or mitigates the effects of household structure on unemployment risk.
+
+```{r}
+if(FALSE) { #Commenting out this chunk to render website
+df_all_post_midterm |>
+  filter(pelaydur > 0, pelaydur <= 52) |> 
+  ggplot(aes(
+    x = fct_reorder(hrhtype, pelaydur, .fun = median),
+    y = pelaydur
+  )) +
+  geom_boxplot(fill = "#FDBF6F") +
+  coord_flip() +
+  labs(
+    title = "Distribution of Unemployment Duration by Household Type",
+    x = "Household Type",
+    y = "Weeks Unemployed (0–52)"
+  ) +
+  theme_minimal()
+}
+
+```
+
+This chart compares the distribution of unemployment durations (0–52 weeks) across different household types. Nonfamily female households exhibit the longest and most variable unemployment spells, with several extreme outliers. In contrast, married-couple households, single male householders, and nonfamily male households show more compressed distributions, indicating shorter and more consistent unemployment durations. The chart highlights how household structure meaningfully shapes economic vulnerability, with single-adult and nonfamily female households facing the greatest labor market instability.
