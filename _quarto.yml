@@ -67,6 +67,8 @@ website:
         href: pages/education.qmd 
       - text: "Race"
         href: pages/race.qmd  
+      - text: "Household Type"
+        href: pages/householdtype.qmd
 
       #- text: "Supplementary Factors"
         #menu:
